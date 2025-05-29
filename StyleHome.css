@@ -73,7 +73,7 @@ border-radius: 8px;
 
 .hero-conteudo .textao {
 
-color: #2d5d3d;
+color: #1fbe54;
 
 }
 
@@ -153,7 +153,11 @@ text-decoration: none;
   font-size: 14px;
 }
 
-.icon {
-    
+.shad {
+
+text-shadow:2px 2px 4px #000000;
+
+
+
 }
 
