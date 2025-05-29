@@ -15,29 +15,33 @@ color: #333;
 }
 
 .header {
-
-background-color: #fff;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 10;
 display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 2rem;
-border-bottom: 1px solid #fff;
-
+background: transparent;
 }
 
 .logo {
 
-font-size: 1.8rem;
+font-size: 2rem;
 font-weight: bold;
-color: #2d5d3d;
+color: #047035;
+text-shadow: 2px 2px 4px #000000;
 }
 
 .nav a {
 
 margin-left: 1.2rem;
 text-decoration: none;
-color: #444;
+color: #ffffff;
 font-weight: 500;
+text-shadow: 2px 2px 4px #000000;
 
 }
 
@@ -50,11 +54,11 @@ border-radius: 5px;
 }
 
 .hero {
-
+height: 120vh;
 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg);
 background-size: cover;
 background-position: center;
-padding: 6rem 2rem;
+padding: 60px 40px;
 color: #fff;
 text-align: left;
 display: flex;
