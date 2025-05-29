@@ -48,3 +48,54 @@ color: #fff;
 padding: 0.5rem 1rem;
 border-radius: 5px;
 }
+
+.hero {
+
+background-image: url("tem que por ainda");
+background-size: cover;
+background-position: center;
+padding: 6rem 2rem;
+color: #fff;
+text-align: left;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+
+.hero-conteudo {
+
+max-width: 600px;
+background-color: rgba(0, 0, 0, 0.4);
+padding: 2rem;
+border-radius: 8px;
+
+}
+
+.hero-conteudo .textao {
+
+color: #2d5d3d;
+
+}
+
+.hero h1 {
+
+font-size: 2.5rem;
+margin-bottom: 1rem;
+
+}
+
+.hero p {
+
+margin-bottom: 1.5rem;
+
+}
+
+.hero .btn {
+
+background-color: #4caf50;
+color: #fff;
+padding: 0.7rem 1.5rem;
+border-radius: 5px;
+text-decoration: none;
+}
+
