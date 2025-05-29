@@ -99,3 +99,63 @@ border-radius: 5px;
 text-decoration: none;
 }
 
+/* Vantagens - container principal */
+.vantagens {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Bloco individual de vantagem */
+.vantagem {
+  max-width: 250px;
+  margin: 20px;
+}
+
+/* Imagem dentro da vantagem */
+.vantagem img {
+  width: 50px;
+  margin: 20px auto;
+}
+
+/* Título de cada vantagem */
+.vantagem h3 {
+  color: #2d5d3d;
+  margin-bottom: 10px;
+}
+
+/* Parágrafo de descrição */
+.vantagem p {
+  font-size: 14px;
+  color: #555;
+}
+/* Blog */
+
+.blog {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.blog img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.blog h3 {
+  color: #2d5d3d;
+  margin-bottom: 10px;
+}
+
+.blog p {
+  color: #555;
+  font-size: 14px;
+}
+
+.icon {
+    
+}
+
