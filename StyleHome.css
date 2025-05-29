@@ -8,8 +8,43 @@ box-sizing: border-box;
 
 body {
 
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #fff;
+color: #333;
+}
 
+.header {
 
+background-color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+border-bottom: 1px solid #fff;
 
-    
+}
+
+.logo {
+
+font-size: 1.8rem;
+font-weight: bold;
+color: #2d5d3d;
+}
+
+.nav a {
+
+margin-left: 1.2rem;
+text-decoration: none;
+color: #444;
+font-weight: 500;
+
+}
+
+.nav .btn {
+
+background-color: #2d5d3d;
+color: #fff;
+padding: 0.5rem 1rem;
+border-radius: 5px;
 }
