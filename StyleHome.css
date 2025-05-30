@@ -69,9 +69,9 @@ justify-content: flex-start;
 .hero-conteudo {
 
 max-width: 600px;
-background-color: rgba(0, 0, 0, 0.4);
 padding: 2rem;
-border-radius: 8px;
+border-radius: 16px;
+font-size: large;
 
 }
 
@@ -83,12 +83,13 @@ color: #1fbe54;
 
 .hero h1 {
 
-font-size: 2.5rem;
+font-size: 3rem;
+border-radius: 80%;
 }
 
 .hero p {
 
-margin-bottom: 1.5rem;
+margin-bottom: 2rem;
 
 }
 
@@ -119,8 +120,8 @@ text-decoration: none;
 
 /* Imagem dentro da vantagem */
 .vantagem img {
-  width: 50px;
-  margin: 20px auto;
+  width: 70px;
+  margin: 30px auto;
 }
 
 /* Título de cada vantagem */
@@ -131,30 +132,33 @@ text-decoration: none;
 
 /* Parágrafo de descrição */
 .vantagem p {
-  font-size: 14px;
+  font-size: 17px;
   color: #555;
 }
 /* Blog */
 
 .blog {
-    text-align: center;
-    padding: 60px 20px;
+    text-align: center flex;
+    padding: 60px 750px;
     background-color: #f4f4f4;
 }
 
 .blog img {
-    width: 50px;
-    margin-bottom: 10px;
+    align-items: left;
+    width: 70px;
+    margin-bottom: 30px auto;
 }
 
 .blog h3 {
+  align-items: right;
   color: #2d5d3d;
   margin-bottom: 10px;
 }
 
 .blog p {
+  align-items: right;
   color: #555;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .shad {
