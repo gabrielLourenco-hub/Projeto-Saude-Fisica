@@ -108,7 +108,7 @@ text-decoration: none;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 60px 40px;
-  background-color: #f4f4f4;
+  background-color: #cccbcb;
   text-align: center;
 }
 
@@ -140,7 +140,7 @@ text-decoration: none;
 .blog {
     text-align: center ;
     padding: 20px 50px;
-    background-color: #f4f4f4;
+    background-color: #cccbcb;
 }
 
 .blog img {
@@ -159,6 +159,7 @@ text-decoration: none;
   align-items: left;
   color: #555;
   font-size: 17px;
+  
 }
 
 .shad {
