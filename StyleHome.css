@@ -138,25 +138,25 @@ text-decoration: none;
 /* Blog */
 
 .blog {
-    text-align: center flex;
-    padding: 60px 750px;
+    text-align: center ;
+    padding: 20px 50px;
     background-color: #f4f4f4;
 }
 
 .blog img {
     align-items: left;
-    width: 70px;
+    width: 90px;
     margin-bottom: 30px auto;
 }
 
 .blog h3 {
-  align-items: right;
+  align-items: left;
   color: #2d5d3d;
   margin-bottom: 10px;
 }
 
 .blog p {
-  align-items: right;
+  align-items: left;
   color: #555;
   font-size: 17px;
 }
