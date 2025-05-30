@@ -182,7 +182,7 @@ text-shadow:2px 2px 4px #000000;
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 0; 
 
 }
 
