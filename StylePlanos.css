@@ -1,0 +1,94 @@
+body {
+
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #f8f9fa;
+color: #212529;
+text-align: center;
+}
+
+.prisec {
+
+padding: 50px 20px;
+
+}
+
+.prisec h1 {
+
+font-size: 4rem;
+margin-bottom: 40px;
+
+}
+
+.cards-container {
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+
+}
+
+.card {
+
+background-color: #f8f9fa;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+padding: 30px;
+width: 250px;
+transition: transform 0.3s ease;
+border: 1px solid black;
+}
+
+.card:hover {
+
+transform: translateY(-5px);
+
+}
+
+.logo {
+
+width: 120px;
+height: 120px;
+margin-bottom: 20px;
+
+}
+
+.card h2 {
+
+font-size: 1.5rem;
+margin: 10px 0;
+
+}
+
+.preco {
+
+font-size: 2rem;
+font-weight: bold;
+margin: 5px 0;
+}
+
+.mes {
+
+font-size: 1rem;
+color: #6c757d;
+margin-bottom: 20px;
+
+}
+button {
+  background-color: white;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+}
+
+button:hover {
+  background-color: #2e7d32;
+  color: white;
+
+}
