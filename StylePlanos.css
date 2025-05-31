@@ -2,18 +2,86 @@ body {
 
 margin: 0;
 font-family: 'Segoe UI', sans-serif;
-background-color: #f8f9fa;
+background: transparent;
 color: #212529;
 text-align: center;
 }
 
-.prisec {
+.Prisec {
+  padding-top: 140px; /* ESSA ALTURA AQUI é o que resolve */
+  padding-bottom: 50px;
+  background: #f5fdf8;
+  text-align: center;
+}
 
-padding: 50px 20px;
+* {
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 
 }
 
-.prisec h1 {
+
+
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 10;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background: transparent;
+}
+
+.header .imlog  {
+
+width:50px ;
+height: auto;
+margin-right: 10px;
+
+}
+
+.logoo {
+display: flex;
+font-size: 2rem;
+font-weight: bold;
+color: #0dac54;
+text-shadow: 2px 2px 4px #000000;
+
+}
+
+
+
+.nav a {
+
+margin-left: 1.2rem;
+text-decoration: none;
+color: #ffffff;
+font-weight: 500;
+text-shadow: 2px 2px 4px #000000;
+
+}
+
+.nav .btn {
+
+background-color: #2d5d3d;
+color: #fff;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0; 
+
+}
+
+.Prisec h1 {
 
 font-size: 4rem;
 margin-bottom: 40px;
