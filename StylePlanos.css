@@ -5,13 +5,16 @@ font-family: 'Segoe UI', sans-serif;
 background: transparent;
 color: #212529;
 text-align: center;
+background-color: #ffffff;
 }
+
 
 .Prisec {
   padding-top: 140px; /* ESSA ALTURA AQUI é o que resolve */
   padding-bottom: 50px;
   background: #f5fdf8;
   text-align: center;
+  background-color: #f8f9fa
 }
 
 * {
@@ -19,6 +22,7 @@ text-align: center;
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+background-color: #f8f9fa
 
 }
 
@@ -35,6 +39,7 @@ justify-content: space-between;
 align-items: center;
 padding: 1rem 2rem;
 background: transparent;
+background-color: #f8f9fa
 }
 
 .header .imlog  {
@@ -72,12 +77,14 @@ background-color: #2d5d3d;
 color: #fff;
 padding: 0.5rem 1rem;
 border-radius: 5px;
+background-color: #f8f9fa
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 0; 
+  background-color: #f8f9fa
 
 }
 
@@ -85,6 +92,7 @@ border-radius: 5px;
 
 font-size: 4rem;
 margin-bottom: 40px;
+background-color: #f8f9fa
 
 }
 
@@ -94,6 +102,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 30px;
+background-color: #f8f9fa
 
 }
 
