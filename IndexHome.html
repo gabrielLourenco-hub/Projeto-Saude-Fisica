@@ -25,12 +25,13 @@
         
         <nav class="nav"> 
   
-    <a href="#">Início</a>
+    <a href="IndexHome.html">Início</a>
     <a href="IndexPlanos.html">Planos</a>
     <a href="#">Nutrição</a>
+    <a href="IndexIMC.html">Calculadora IMC</a>
     <a href="#">Treinos</a>
     <a href="#">Blog</a>
-    <a href="#" class="btn">Comece Agora</a>
+    <a href="IndexForm.html" class="btn">Comece Agora</a>
         </nav>
 
     </header>
@@ -60,6 +61,21 @@ class textao estou utilizando para decorar palavras especificas
 
 </div>
 
+</section>
+
+<!-- Carrossel de Vídeos do YouTube -->
+<section class="carrossel-videos">
+  <div class="video-slide active">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XNLQtWdk6fc?si=B2k_NQ-48IHKscGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oSt6GsSw6VI?si=uKfMczR9YkTsBrsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fvqVpYuCA7o?si=PJ4G5o5p6KpC8hDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <button class="carrossel-btn prev" onclick="mudarVideo(-1)">&#10094;</button>
+  <button class="carrossel-btn next" onclick="mudarVideo(1)">&#10095;</button>
 </section>
 
 <!--Agora vamos por aqueles exemplos de recursos que nosso site possui, com dicas de nutrição e treinos eficazes por exemplo.-->
@@ -96,6 +112,7 @@ class textao estou utilizando para decorar palavras especificas
 
 </section>
 
+<script src="ScriptP.js"></script>
 
 </body>
 </html>
