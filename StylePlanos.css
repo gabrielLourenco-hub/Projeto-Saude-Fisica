@@ -5,16 +5,19 @@ font-family: 'Segoe UI', sans-serif;
 background: transparent;
 color: #212529;
 text-align: center;
-background-color: #ffffff;
+background-color: transparent;
 }
 
 
 .Prisec {
+  min-height: 100vh; /* Faz a seção ocupar toda a altura da tela */
   padding-top: 140px; /* ESSA ALTURA AQUI é o que resolve */
   padding-bottom: 50px;
-  background: #f5fdf8;
+  /* background: #f5fdf8; */ /* Remova ou comente esta linha */
   text-align: center;
-  background-color: #f8f9fa
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 * {
@@ -22,7 +25,7 @@ background-color: #ffffff;
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-background-color: #f8f9fa
+background-color: transparent
 
 }
 
@@ -39,7 +42,7 @@ justify-content: space-between;
 align-items: center;
 padding: 1rem 2rem;
 background: transparent;
-background-color: #f8f9fa
+background-color: transparent
 }
 
 .header .imlog  {
@@ -77,23 +80,21 @@ background-color: #2d5d3d;
 color: #fff;
 padding: 0.5rem 1rem;
 border-radius: 5px;
-background-color: #f8f9fa
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 0; 
-  background-color: #f8f9fa
+  background-color:transparent 
 
 }
 
 .Prisec h1 {
-
+color: #fff;
 font-size: 4rem;
 margin-bottom: 40px;
-background-color: #f8f9fa
-
+background-color: transparent
 }
 
 .cards-container {
@@ -102,7 +103,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 30px;
-background-color: #f8f9fa
+background-color: transparent
 
 }
 
@@ -168,4 +169,102 @@ button:hover {
   background-color: #2e7d32;
   color: white;
 
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1; /* ajuste a transparência como quiser */
+}
+
+.Prisec > *:not(.video-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .nav a {
+    margin-left: 0;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .logoo {
+    font-size: 1.5rem;
+  }
+  .Prisec {
+    padding-top: 180px; /* Aumente para garantir espaço para o header fixo */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    min-height: 60vh;
+    text-align: center;
+    justify-content: center;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .card {
+    width: 90%;
+    max-width: 350px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem;
+    gap: 8px;
+  }
+  .logoo {
+    font-size: 1.2rem;
+  }
+  .Prisec {
+    padding-top: 160px; /* Aumente para garantir espaço para o header fixo */
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 30px;
+    min-height: 50vh;
+  }
+  .Prisec h1 {
+    font-size: 1.3rem;
+  }
+  .card {
+    padding: 15px;
+    font-size: 0.95rem;
+    width: 98vw;
+    max-width: 350px;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .nav a {
+    font-size: 0.95rem;
+    margin-left: 0;
+    padding: 0.2rem 0.5rem;
+  }
 }
