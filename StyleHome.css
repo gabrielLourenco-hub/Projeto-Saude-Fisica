@@ -3,14 +3,14 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-
+background-color: transparent;
 }
 
 body {
 
 font-family: Arial, sans-serif;
 line-height: 1.6;
-background-color: #fff;
+background-color: transparent;
 color: #333;
 }
 
@@ -55,6 +55,7 @@ font-weight: 500;
 text-shadow: 2px 2px 4px #000000;
 
 }
+
 
 .nav .btn {
 
@@ -119,7 +120,6 @@ text-decoration: none;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 60px 40px;
-  background-color: #cccbcb;
   text-align: center;
 }
 
@@ -151,7 +151,6 @@ text-decoration: none;
 .blog {
     text-align: center ;
     padding: 20px 50px;
-    background-color: #cccbcb;
 }
 
 .blog img {
@@ -184,5 +183,139 @@ text-shadow:2px 2px 4px #000000;
   align-items: center;
   gap: 0; 
 
+}
+
+/* Carrossel de Vídeos */
+.carrossel-videos {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-slide {
+  display: none;
+  width: 100%;
+}
+.video-slide.active {
+  display: block;
+}
+.carrossel-videos iframe {
+  width: 100%;
+  height: 340px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0dac54;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.8;
+}
+.carrossel-btn.prev { left: 10px; }
+.carrossel-btn.next { right: 10px; }
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .nav a {
+    margin-left: 0;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .hero {
+    padding: 120px 10px 40px 10px;
+    min-height: 60vh;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-conteudo {
+    padding: 1rem;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .vantagens {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    gap: 20px;
+  }
+  .vantagem {
+    width: 90%;
+    max-width: 350px;
+    margin: 10px 0;
+  }
+  .blog {
+    padding: 20px 10px;
+  }
+  .carrossel-videos { max-width: 98vw; }
+  .carrossel-videos iframe { height: 200px; }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem;
+    gap: 8px;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .hero {
+    padding: 100px 5px 30px 5px;
+    min-height: 50vh;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .hero-conteudo {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .vantagem {
+    margin: 10px 0;
+    max-width: 98vw;
+    font-size: 0.98rem;
+  }
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+  .blog {
+    padding: 10px 5px;
+    font-size: 0.98rem;
+  }
+  .nav a {
+    font-size: 0.95rem;
+    margin-left: 0;
+    padding: 0.2rem 0.5rem;
+  }
 }
 
