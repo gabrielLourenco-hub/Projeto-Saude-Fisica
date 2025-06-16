@@ -8,17 +8,18 @@ background-color:transparent
 }
 
 body {
-
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background: transparent;
-color: #212529;
-text-align: center;
-background-color: transparent
-
+  font-family: 'Segoe UI', sans-serif;
+  background: url('Novaaa.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #212529;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 .header {
 position: fixed;
@@ -81,21 +82,6 @@ border-radius: 5px;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url(aa.png) no-repeat center center fixed;
-  background-size: cover;
-}
 
 .wrapper {
   width: 280px; /* ainda menor */
