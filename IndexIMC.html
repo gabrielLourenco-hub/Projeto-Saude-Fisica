@@ -37,6 +37,8 @@
     <!-- Tabela de IMC -->
 <section class="tabela-imc">
   <p class="texto-antes">
+
+    <div class="caixa-central">
     O que é o IMC ? <br><br>
 
 O IMC, sigla para Índice de Massa Corporal, é uma medida utilizada para avaliar se uma pessoa está com o peso adequado em relação à sua altura. Ele é amplamente utilizado por profissionais da saúde como uma forma simples e rápida de identificar possíveis problemas relacionados ao peso, como magreza excessiva, sobrepeso ou obesidade. <br><br>
@@ -84,22 +86,37 @@ Classificação do IMC (adultos):
       </tr>
     </tbody>
   </table>
-  <p class="texto-depois">
-    Por que o IMC é importante? <br><br>
-O IMC ajuda a identificar rapidamente se o peso de uma pessoa pode estar colocando sua saúde em risco. Estar fora da faixa ideal pode aumentar as chances de desenvolver doenças como: <br><br>
 
-Diabetes tipo 2 <br>
+<div class="tabela-imc">
+  <h2>Calculadora de IMC</h2>
+  
+  <div class="sexo">
+    <button id="mulher" class="sexo-btn ativo">Mulher</button>
+    <button id="homem" class="sexo-btn">Homem</button>
+  </div>
 
-Hipertensão (pressão alta) <br>
+  <div class="campo">
+    <label for="idade">Idade</label>
+    <input type="number" id="idade" placeholder="Ex: 35" /> anos
+  </div>
 
-Problemas cardíacos <br>
+  <div class="campo">
+    <label for="altura">Altura</label>
+    <input type="number" id="altura" placeholder="Ex: 165" /> cm
+  </div>
 
-Distúrbios alimentares <br>
+  <div class="campo">
+    <label for="peso">Peso</label>
+    <input type="number" id="peso" placeholder="Ex: 62,5" step="0.1" /> kg
+  </div>
 
-Complicações ortopédicas <br><br>
+  <button class="calcular">CALCULAR</button>
 
-Apesar disso, o IMC não avalia a composição corporal, ou seja, não diferencia músculo de gordura. Por isso, atletas ou pessoas com muita massa muscular podem ter IMC alto sem estarem acima do peso de forma prejudicial.
-  </p>
+
+</div>
+
+  
+  </div>
 </section>
 
 </body>

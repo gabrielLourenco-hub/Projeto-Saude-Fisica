@@ -125,3 +125,80 @@ border-radius: 5px;
   .tabela-imc { max-width: 98vw; }
   .tabela-imc th, .tabela-imc td { padding: 8px 2px; font-size: 0.95rem; }
 }
+
+.caixa-central {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px;
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adicione este código ao seu style.css */
+
+.tabela-imc {
+  width: 100%;
+  margin-top: 28px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+ 
+}
+
+.tabela-imc th, .tabela-imc td {
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tabela-imc th {
+
+  color: #222;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.tabela-imc tr:hover td {
+ 
+  transition: background 0.2s;
+}
+
+.tabela-imc td {
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabela-imc tr:last-child td {
+  border-bottom: none;
+}
+
+.calcular {
+  background: #4caf50; /* verde */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  margin-top: 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calcular:hover {
+  background: #388e3c; /* verde mais escuro ao passar o mouse */
+}
+
+#homem.sexo-btn{
+  background: #2196f3; /* azul */
+  color: #fff;
+}
+
+#mulher.sexo-btn.ativo {
+  background: #e91e63; /* rosa */
+  color: #fff;
+}
