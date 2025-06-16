@@ -109,7 +109,7 @@ border-radius: 5px;
 .tabela-imc tr:last-child td {
   border-bottom: none;
 }
-.texto-antes, .texto-depois {
+.texto-antes {
   max-width: 700px;
   margin: 20px auto;
   font-size: 1.13rem;
@@ -130,8 +130,8 @@ border-radius: 5px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  padding: 32px;
-  max-width: 400px;
+  padding: 30px;
+  max-width: 550px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
@@ -146,7 +146,6 @@ border-radius: 5px;
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
  
 }
 
@@ -177,28 +176,61 @@ border-radius: 5px;
   border-bottom: none;
 }
 
+.tabela-calcular h1{
+  align-items: center;
+}
+.tabela-calcular {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 35px;
+  align-items: flex-start; /* Alinha à esquerda */
+  font-size: larger;
+  border-color: #000000;
+  width: 100%;            /* Ocupa toda a largura do container pai */
+}
+
+.tabela-calcular input,
+.tabela-calcular select,
+.tabela-calcular label {
+  width: 100%;            /* Inputs e labels ocupam toda a largura */
+  box-sizing: border-box;
+}
+
 .calcular {
-  background: #4caf50; /* verde */
+  background: linear-gradient(90deg, #0dac54 60%, #4caf50 100%);
+  display: flex;
+  flex-direction: column;
   color: #fff;
   border: none;
-  border-radius: 6px;
-  padding: 10px 24px;
+  border-radius: 10px;
+  padding: 10px 28px;           /* botão um pouco menor */
   margin-top: 18px;
-  font-size: 1rem;
+  font-size: 1.25rem;           /* texto maior */
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px #088c43;
 }
 
 .calcular:hover {
-  background: #388e3c; /* verde mais escuro ao passar o mouse */
+  background: linear-gradient(90deg, #088c43 60%, #388e3c 100%);
+  transform: scale(1.07);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
 #homem.sexo-btn{
   background: #2196f3; /* azul */
   color: #fff;
+  font-size: large;
+  padding: auto;
 }
 
 #mulher.sexo-btn.ativo {
   background: #e91e63; /* rosa */
   color: #fff;
+  font-size: large;
+  padding: 2rem auto;
 }
