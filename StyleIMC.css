@@ -176,6 +176,21 @@ border-radius: 5px;
   border-bottom: none;
 }
 
+.Caixa-tabela {
+  background: rgba(255, 255, 255, 0.96); /* fundo branco levemente translúcido */
+  border: 1px solid #dcdcdc;             /* borda cinza clara mais moderna */
+  border-radius: 12px;                   /* cantos arredondados */
+  padding: 20px 24px;                    /* espaço interno mais generoso */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* sombra suave para destaque */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Adiciona um leve efeito quando o mouse passa */
+.Caixa-tabela:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+
 .tabela-calcular h1{
   align-items: center;
 }
@@ -221,16 +236,28 @@ border-radius: 5px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
+.sexo-btn {
+  padding: 0.75rem 1.5rem; /* altura e largura do espaçamento interno */
+  font-size: large;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 8px; /* espaço entre os botões */
+}
+
 #homem.sexo-btn{
   background: #2196f3; /* azul */
   color: #fff;
   font-size: large;
-  padding: auto;
+  padding: 0.5rem ;
+
 }
 
 #mulher.sexo-btn.ativo {
   background: #e91e63; /* rosa */
   color: #fff;
   font-size: large;
-  padding: 2rem auto;
+  padding: 0.5rem ;
 }
