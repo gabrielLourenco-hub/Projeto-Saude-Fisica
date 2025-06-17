@@ -1,169 +1,128 @@
+/* Reset e estilos básicos */
 * {
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color:transparent
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
   background: url(full-shot-mulher-com-fones-de-ouvido.jpg) no-repeat center center fixed;
-  background-size: cover; /* Adicione esta linha */
+  background-size: cover;
   color: #212529;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
+/* Cabeçalho fixo */
 .header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 10;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 2rem;
-background: transparent;
-background-color: transparent
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  flex-wrap: wrap; 
 }
 
-.header .imlog  {
-
-width:50px ;
-height: auto;
-margin-right: 10px;
-
+.header .imlog {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .logoo {
-display: flex;
-font-size: 2rem;
-font-weight: bold;
-color: #0dac54;
-text-shadow: 2px 2px 4px #000000;
-
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0dac54;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
 .nav a {
-
-margin-left: 1.2rem;
-text-decoration: none;
-color: #ffffff;
-font-weight: 500;
-text-shadow: 2px 2px 4px #000000;
-
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #000000;
+  white-space: nowrap;
+  margin: 0.3rem 0.7rem;
 }
 
 .nav .btn {
-
-background-color: #2d5d3d;
-color: #fff;
-padding: 0.5rem 1rem;
-border-radius: 5px;
+  background-color: #2d5d3d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
+/* Container logo */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0; 
-  background-color: transparent
-
+  gap: 0;
+  background-color: transparent;
+  flex-shrink: 0;
 }
 
+/* Tabela IMC */
 .tabela-imc {
-  margin: 40px auto 30px auto;    /* centraliza horizontalmente */
-  max-width: 700px;               /* menor que 900px */
+  margin: 120px auto 30px auto;
+  max-width: 700px;
   text-align: left;
-  padding-top: 100px;
+  padding: 0 1rem;
+  width: 100%;
 }
+
 .tabela-imc h2 {
   color: #0dac54;
   margin-bottom: 18px;
-  font-size: 1.7rem;              /* menor que antes */
-  text-align: left;
+  font-size: 1.7rem;
 }
+
 .tabela-imc table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-  font-size: 1.05rem;             /* menor que antes */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  font-size: 1.05rem;
 }
-.tabela-imc th, .tabela-imc td {
-  padding: 12px 8px;              /* células um pouco menores */
+
+.tabela-imc th,
+.tabela-imc td {
+  padding: 12px 8px;
   border-bottom: 1px solid #eee;
-}
-.tabela-imc th {
-  background: #0dac54;
-  color: #fff;
-  font-weight: bold;
-}
-.tabela-imc tr:last-child td {
-  border-bottom: none;
-}
-.texto-antes {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.13rem;
-  color: #fff;           
-  text-align: left;
-  text-shadow: 2px 2px 6px #000; /* sombra para dar mais visibilidade */
-}
-@media (max-width: 900px) {
-  .tabela-imc, .texto-antes, .texto-depois { max-width: 98vw; margin-left: 10px; margin-right: 10px; }
-  .tabela-imc table { font-size: 0.98rem; }
-}
-@media (max-width: 600px) {
-  .tabela-imc { max-width: 98vw; }
-  .tabela-imc th, .tabela-imc td { padding: 8px 2px; font-size: 0.95rem; }
-}
-
-.caixa-central {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  padding: 30px;
-  max-width: 550px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Adicione este código ao seu style.css */
-
-.tabela-imc {
-  width: 100%;
-  margin-top: 28px;
-  border-collapse: collapse;
-  border-radius: 10px;
-  overflow: hidden;
- 
-}
-
-.tabela-imc th, .tabela-imc td {
-  padding: 10px 8px;
   text-align: center;
   font-size: 1rem;
 }
 
 .tabela-imc th {
-
-  color: #222;
+  background: #0dac54;
+  color: #fff;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
+.tabela-imc tr:last-child td {
+  border-bottom: none;
+}
+
 .tabela-imc tr:hover td {
- 
   transition: background 0.2s;
 }
 
@@ -172,45 +131,70 @@ border-radius: 5px;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.tabela-imc tr:last-child td {
-  border-bottom: none;
+
+.texto-antes {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.13rem;
+  color: #fff;
+  text-align: left;
+  text-shadow: 2px 2px 6px #000;
+  padding: 0 1rem;
 }
 
-.Caixa-tabela {
-  background: rgba(255, 255, 255, 0.96); /* fundo branco levemente translúcido */
-  border: 1px solid #dcdcdc;             /* borda cinza clara mais moderna */
-  border-radius: 12px;                   /* cantos arredondados */
-  padding: 20px 24px;                    /* espaço interno mais generoso */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* sombra suave para destaque */
+
+.caixa-central {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 550px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+
+.caixa-tabela {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
 }
 
-/* Adiciona um leve efeito quando o mouse passa */
-.Caixa-tabela:hover {
+.caixa-tabela:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 
-.tabela-calcular h1{
-  align-items: center;
-}
 .tabela-calcular {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding-top: 35px;
-  align-items: flex-start; /* Alinha à esquerda */
+  align-items: flex-start;
   font-size: larger;
   border-color: #000000;
-  width: 100%;            /* Ocupa toda a largura do container pai */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 0 1rem;
 }
 
 .tabela-calcular input,
 .tabela-calcular select,
 .tabela-calcular label {
-  width: 100%;            /* Inputs e labels ocupam toda a largura */
+  width: 100%;
   box-sizing: border-box;
 }
+
 
 .calcular {
   background: linear-gradient(90deg, #0dac54 60%, #4caf50 100%);
@@ -219,45 +203,153 @@ border-radius: 5px;
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 10px 28px;           /* botão um pouco menor */
+  padding: 10px 28px;
   margin-top: 18px;
-  font-size: 1.25rem;           /* texto maior */
+  font-size: 1.25rem;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
   letter-spacing: 1px;
   text-shadow: 1px 1px 4px #088c43;
+  align-self: center;
+  width: auto;
+  min-width: 150px;
 }
 
 .calcular:hover {
   background: linear-gradient(90deg, #088c43 60%, #388e3c 100%);
   transform: scale(1.07);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
 }
 
+
 .sexo-btn {
-  padding: 0.75rem 1.5rem; /* altura e largura do espaçamento interno */
+  padding: 0.5rem 1.5rem;
   font-size: large;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  margin: 8px; /* espaço entre os botões */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 8px;
+  color: #fff;
+  flex: 1 1 45%;
+  max-width: 180px;
+  text-align: center;
 }
 
-#homem.sexo-btn{
-  background: #2196f3; /* azul */
-  color: #fff;
-  font-size: large;
-  padding: 0.5rem ;
-
+#homem.sexo-btn {
+  background: #2196f3;
 }
 
 #mulher.sexo-btn.ativo {
-  background: #e91e63; /* rosa */
-  color: #fff;
-  font-size: large;
-  padding: 0.5rem ;
+  background: #e91e63;
+}
+
+/* Responsividade geral */
+
+@media (max-width: 900px) {
+  .header {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .header .imlog {
+    width: 40px;
+  }
+
+  .logoo {
+    font-size: 1.5rem;
+  }
+
+  .nav a {
+    margin-left: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .tabela-imc,
+  .texto-antes,
+  .texto-depois,
+  .caixa-central,
+  .caixa-tabela,
+  .tabela-calcular {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tabela-imc table {
+    font-size: 0.95rem;
+  }
+
+  .sexo-btn {
+    font-size: medium;
+    padding: 0.5rem 1rem;
+    max-width: 140px;
+  }
+
+  .calcular {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .header .imlog {
+    width: 35px;
+  }
+
+  .logoo {
+    font-size: 1.3rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    margin: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .tabela-imc,
+  .texto-antes,
+  .texto-depois,
+  .caixa-central,
+  .caixa-tabela,
+  .tabela-calcular {
+    max-width: 98vw;
+    padding: 0 0.5rem;
+  }
+
+  .tabela-imc table {
+    font-size: 0.9rem;
+  }
+
+  .tabela-imc th,
+  .tabela-imc td {
+    padding: 8px 4px;
+  }
+
+  .sexo-btn {
+    flex: 1 1 100%;
+    max-width: 100%;
+    font-size: medium;
+    padding: 0.5rem 1rem;
+  }
+
+  .calcular {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
 }
