@@ -1,126 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeHub</title>
-    <link rel="stylesheet" href="StyleIMC.css">
-        <link rel="icon" href="imagens/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LifeHub</title>
+  <link rel="stylesheet" href="StyleIMC.css" />
+  <link rel="icon" href="imagens/favicon.ico" />
 </head>
 <body>
 
-    <!--esse é o cabeçalho, a parte de cima onde fica os botões da home e que vai nos enviar para outras pag-->
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo-container">
+      <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site" />
+      <div class="logoo">LifeHub</div>
+    </div>
+    <nav class="nav">
+      <a href="IndexHome.html">Início</a>
+      <a href="IndexPlanos.html">Planos</a>
+      <a href="#">Nutrição</a>
+      <a href="IndexIMC.html">Calculadora IMC</a>
+      <a href="#">Treinos</a>
+      <a href="#">Blog</a>
+      <a href="IndexForm.html" class="btn">Comece Agora</a>
+    </nav>
+  </header>
 
-    <header class="header">
-        
-      <div class="logo-container">
-        
-  <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
-  <div class="logoo">LifeHub</div>
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção explicativa do IMC -->
+    <section class="tabela-imc">
+      <div class="caixa-central">
+        <p>
+          <strong>O que é o IMC?</strong><br /><br />
+          O IMC, sigla para Índice de Massa Corporal, é uma medida utilizada para avaliar se uma pessoa está com o peso adequado em relação à sua altura. Ele é amplamente utilizado por profissionais da saúde como uma forma simples e rápida de identificar possíveis problemas relacionados ao peso, como magreza excessiva, sobrepeso ou obesidade.<br /><br />
+          O cálculo do IMC é feito dividindo o peso (em quilogramas) pela altura ao quadrado (em metros), usando a fórmula:<br />
+          <em>IMC = peso (kg) / altura (m)²</em><br /><br />
+          Classificação do IMC (adultos):
+        </p>
 
-</div>
-        
-   
-        
-        <nav class="nav"> 
-  
-    <a href="IndexHome.html">Início</a>
-    <a href="IndexPlanos.html">Planos</a>
-    <a href="#">Nutrição</a>
-    <a href="IndexIMC.html">Calculadora IMC</a>
-    <a href="#">Treinos</a>
-    <a href="#">Blog</a>
-    <a href="IndexForm.html" class="btn">Comece Agora</a>
-        </nav>
+        <h2>Tabela de Classificação do IMC</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>IMC</th>
+              <th>Classificação</th>
+              <th>Obesidade (Grau)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Menor que 18,5</td>
+              <td>Magreza</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>18,5 - 24,9</td>
+              <td>Normal</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>25,0 - 29,9</td>
+              <td>Sobrepeso</td>
+              <td>I</td>
+            </tr>
+            <tr>
+              <td>30,0 - 39,9</td>
+              <td>Obesidade</td>
+              <td>II</td>
+            </tr>
+            <tr>
+              <td>Maior que 40,0</td>
+              <td>Obesidade Grave</td>
+              <td>III</td>
+            </tr>
+          </tbody>
+        </table>
 
-    </header>
+        <!-- Calculadora IMC -->
+        <div class="caixa-tabela">
+          <div class="tabela-calcular">
+            <h2>Calculadora de IMC</h2>
+            <div class="sexo">
+              <button id="mulher" class="sexo-btn ativo">Mulher</button>
+              <button id="homem" class="sexo-btn">Homem</button>
+            </div>
 
-    <!-- Tabela de IMC -->
-<section class="tabela-imc">
-  <p class="texto-antes">
+            <div class="campo">
+              <label for="idade">Idade</label>
+              <input type="number" id="idade" placeholder="Ex: 35" />
+            </div>
 
-    <div class="caixa-central">
-    O que é o IMC ? <br><br>
+            <div class="campo">
+              <label for="altura">Altura (cm)</label>
+              <input type="number" id="altura" placeholder="Ex: 165" />
+            </div>
 
-O IMC, sigla para Índice de Massa Corporal, é uma medida utilizada para avaliar se uma pessoa está com o peso adequado em relação à sua altura. Ele é amplamente utilizado por profissionais da saúde como uma forma simples e rápida de identificar possíveis problemas relacionados ao peso, como magreza excessiva, sobrepeso ou obesidade. <br><br>
+            <div class="campo">
+              <label for="peso">Peso (kg)</label>
+              <input type="number" id="peso" placeholder="Ex: 62,5" step="0.1" />
+            </div>
 
-O cálculo do IMC é feito dividindo o peso (em quilogramas) pela altura ao quadrado (em metros), usando a fórmula: <br>
-
-IMC = peso (kg)/altura (m)2 <br><br>
- 
-Classificação do IMC (adultos): <br><br>
-  </p>
-  <h2>Tabela de Classificação do IMC</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>IMC</th>
-        <th>Classificação</th>
-        <th>Obesidade (Grau)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Menor que 18,5</td>
-        <td>Magreza</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>18,5 - 24,9</td>
-        <td>Normal</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>25,0 - 29,9</td>
-        <td>Sobrepeso</td>
-        <td>I</td>
-      </tr>
-      <tr>
-        <td>30,0 - 39,9</td>
-        <td>Obesidade</td>
-        <td>II</td>
-      </tr>
-      <tr>
-        <td>Maior que 40,0</td>
-        <td>Obesidade Grave</td>
-        <td>III</td>
-      </tr>
-    </tbody>
-  </table>
-<br><br>
-<div class="Caixa-tabela">
- <div class="tabela-calcular">
-  <h2>Calculadora de IMC</h2>
-  
-  <div class="sexo">
-    <button id="mulher" class="sexo-btn ativo">Mulher</button>
-    <button id="homem" class="sexo-btn">Homem</button>
-  </div>
-
-  <div class="campo">
-    <label for="idade">Idade</label>
-    <input type="number" id="idade" placeholder="Ex: 35" /> 
-  </div>
-
-  <div class="campo">
-    <label for="altura">Altura</label>
-    <input type="number" id="altura" placeholder="Ex: 165" /> 
-  </div>
-
-  <div class="campo">
-    <label for="peso">Peso</label>
-    <input type="number" id="peso" placeholder="Ex: 62,5" step="0.1" /> 
-  </div>
-
-  <button class="calcular">CALCULAR</button>
-
-
- </div>
-
-</div>
-  
-  </div>
-</section>
+            <button class="calcular">CALCULAR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
