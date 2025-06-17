@@ -1,17 +1,14 @@
 * {
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-
-font-family: Arial, sans-serif;
-line-height: 1.6;
-background-color: transparent;
-color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
 }
 
 .header {
@@ -27,94 +24,91 @@ padding: 1rem 2rem;
 background: transparent;
 }
 
-.header .imlog  {
+.header .imlog {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
 
-width:50px ;
-height: auto;
-margin-right: 10px;
-
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
-display: flex;
-font-size: 2rem;
-font-weight: bold;
-color: #0dac54;
-text-shadow: 2px 2px 4px #000000;
-
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0dac54;
+  text-shadow: 2px 2px 4px #000;
 }
-
-
 
 .nav a {
-
-margin-left: 1.2rem;
-text-decoration: none;
-color: #ffffff;
-font-weight: 500;
-text-shadow: 2px 2px 4px #000000;
-
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #000;
 }
 
-
 .nav .btn {
+  background-color: #2d5d3d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
 
-background-color: #2d5d3d;
-color: #fff;
-padding: 0.5rem 1rem;
-border-radius: 5px;
+.nav a:hover,
+.hero .btn:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 .hero {
-height: 100vh;
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg);
-background-size: cover;
-background-position: center;
-padding: 60px 40px;
-color: #fff;
-text-align: left;
-display: flex;
-align-items: center;
-justify-content: flex-start;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-conteudo {
-
-max-width: 600px;
-padding: 2rem;
-border-radius: 16px;
-font-size: large;
-
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 16px;
+  font-size: large;
 }
 
 .hero-conteudo .textao {
-
-color: #1fbe54;
-
+  color: #1fbe54;
 }
 
 .hero h1 {
-
-font-size: 3rem;
-border-radius: 80%;
+  font-size: 3rem;
+  border-radius: 80%;
 }
 
 .hero p {
-
-margin-bottom: 2rem;
-
+  margin-bottom: 2rem;
 }
 
 .hero .btn {
-
-background-color: #4caf50;
-color: #fff;
-padding: 0.7rem 1.5rem;
-border-radius: 5px;
-text-decoration: none;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-/* Vantagens - container principal */
 .vantagens {
   display: flex;
   justify-content: space-around;
@@ -123,69 +117,50 @@ text-decoration: none;
   text-align: center;
 }
 
-/* Bloco individual de vantagem */
 .vantagem {
   max-width: 250px;
   margin: 20px;
 }
 
-/* Imagem dentro da vantagem */
 .vantagem img {
   width: 70px;
   margin: 30px auto;
 }
 
-/* Título de cada vantagem */
 .vantagem h3 {
   color: #2d5d3d;
   margin-bottom: 10px;
 }
 
-/* Parágrafo de descrição */
 .vantagem p {
   font-size: 17px;
   color: #555;
 }
-/* Blog */
 
 .blog {
-    text-align: center ;
-    padding: 20px 50px;
+  text-align: center;
+  padding: 20px 50px;
 }
 
 .blog img {
-    align-items: left;
-    width: 90px;
-    margin-bottom: 30px auto;
+  width: 90px;
+  margin-bottom: 30px;
 }
 
 .blog h3 {
-  align-items: left;
   color: #2d5d3d;
   margin-bottom: 10px;
 }
 
 .blog p {
-  align-items: left;
   color: #555;
   font-size: 17px;
-  
 }
 
 .shad {
-
-text-shadow:2px 2px 4px #000000;
-
+  text-shadow: 2px 2px 4px #000;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0; 
-
-}
-
-/* Carrossel de Vídeos */
 .carrossel-videos {
   position: relative;
   width: 100%;
@@ -195,19 +170,23 @@ text-shadow:2px 2px 4px #000000;
   align-items: center;
   justify-content: center;
 }
+
 .video-slide {
   display: none;
   width: 100%;
 }
+
 .video-slide.active {
   display: block;
 }
+
 .carrossel-videos iframe {
   width: 100%;
   height: 340px;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
+
 .carrossel-btn {
   position: absolute;
   top: 50%;
@@ -222,10 +201,15 @@ text-shadow:2px 2px 4px #000000;
   z-index: 2;
   opacity: 0.8;
 }
-.carrossel-btn.prev { left: 10px; }
-.carrossel-btn.next { right: 10px; }
 
-/* Responsividade para telas menores */
+.carrossel-btn.prev {
+  left: 10px;
+}
+
+.carrossel-btn.next {
+  right: 10px;
+}
+
 @media (max-width: 900px) {
   .header {
     flex-direction: column;
@@ -233,6 +217,7 @@ text-shadow:2px 2px 4px #000000;
     padding: 0.5rem 1rem;
     gap: 10px;
   }
+
   .nav {
     width: 100%;
     display: flex;
@@ -241,41 +226,54 @@ text-shadow:2px 2px 4px #000000;
     gap: 10px;
     margin-top: 10px;
   }
+
   .nav a {
     margin-left: 0;
     font-size: 1rem;
     padding: 0.3rem 0.7rem;
   }
+
   .logo {
     font-size: 1.5rem;
   }
+
   .hero {
     padding: 120px 10px 40px 10px;
     min-height: 60vh;
     text-align: center;
     justify-content: center;
   }
+
   .hero-conteudo {
     padding: 1rem;
     font-size: 1rem;
     max-width: 100%;
   }
+
   .vantagens {
     flex-direction: column;
     align-items: center;
     padding: 40px 10px;
     gap: 20px;
   }
+
   .vantagem {
     width: 90%;
     max-width: 350px;
     margin: 10px 0;
   }
+
   .blog {
     padding: 20px 10px;
   }
-  .carrossel-videos { max-width: 98vw; }
-  .carrossel-videos iframe { height: 200px; }
+
+  .carrossel-videos {
+    max-width: 98vw;
+  }
+
+  .carrossel-videos iframe {
+    height: 200px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -285,33 +283,41 @@ text-shadow:2px 2px 4px #000000;
     padding: 0.5rem 0.5rem;
     gap: 8px;
   }
+
   .logo {
     font-size: 1.2rem;
   }
+
   .hero {
     padding: 100px 5px 30px 5px;
     min-height: 50vh;
   }
+
   .hero h1 {
     font-size: 1.3rem;
   }
+
   .hero-conteudo {
     padding: 0.5rem;
     font-size: 0.95rem;
   }
+
   .vantagem {
     margin: 10px 0;
     max-width: 98vw;
     font-size: 0.98rem;
   }
+
   .icon {
     width: 36px;
     height: 36px;
   }
+
   .blog {
     padding: 10px 5px;
     font-size: 0.98rem;
   }
+
   .nav a {
     font-size: 0.95rem;
     margin-left: 0;
