@@ -3,114 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Começe agora </title>
+    <title>Comece agora</title>
     <link rel="stylesheet" href="Styleform.css">
-        <link rel="icon" href="imagens/favicon.ico">
+    <link rel="icon" href="imagens/favicon.ico">
 </head>
 <body>
 
-     <!--esse é o cabeçalho, a parte de cima onde fica os botões da home e que vai nos enviar para outras pag-->
+    <!-- Cabeçalho do site com os botões de navegação para outras páginas -->
 
     <header class="header">
+        <div class="logo-container">
+            <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
+            <div class="logo-text">LifeHub</div>
+        </div>
         
-      <div class="logo-container">
-        
-      <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
-      <div class="logoo">LifeHub</div>
-
-      </div>
-
-        
-      <nav class="nav"> 
-  
-      <a href="IndexHome.html">Início</a>
-      <a href="IndexPlanos.html">Planos</a>
-      <a href="#">Nutrição</a>
-      <a href="IndexIMC.html">Calculadora IMC</a>
-      <a href="#">Treinos</a>
-      <a href="#">Blog</a>
-      <a href="IndexForm.html" class="btn">Comece Agora</a>
-      </nav>
-
+        <nav class="nav"> 
+            <a href="IndexHome.html">Início</a>
+            <a href="IndexPlanos.html">Planos</a>
+            <a href="#">Nutrição</a>
+            <a href="IndexIMC.html">Calculadora IMC</a>
+            <a href="#">Treinos</a>
+            <a href="#">Blog</a>
+            <a href="IndexForm.html" class="btn">Comece Agora</a>
+        </nav>
     </header>
-     <div class="wrapper">
-    <form action="">
-      <h1>Cadastre-se</h1>
 
-      <div class="input-box">
-        <input 
-          type="text" 
-          placeholder="Nome completo" 
-          required 
-          pattern="[A-Za-zÀ-ÿ ]+" 
-          title="Preencha apenas com letras e espaços, obrigatório" 
-        />
-        <i class="bx bxs-user"></i>
-      </div>
+    <div class="wrapper">
+        <form>
+            <h1>Cadastre-se</h1>
 
-      <div class="input-box">
-        <input 
-          type="email" 
-          placeholder="Email institucional" 
-          required 
-          pattern=".+@(unifoa\.edu\.br|foa\.org\.br)" 
-          title="Use email institucional válido, obrigatório!" 
-        />
-        <i class="bx bxs-envelope"></i>
-      </div>
+            <div class="input-box">
+                <input 
+                    type="text" 
+                    placeholder="Nome completo" 
+                    required 
+                    pattern="[A-Za-zÀ-ÿ ]+" 
+                    title="Preencha apenas com letras e espaços, obrigatório" 
+                />
+                <i class="bx bxs-user"></i>
+            </div>
 
-      <div class="input-box">
-        <input 
-          type="password" 
-          placeholder="Senha (6-10 caracteres)" 
-          required 
-          pattern="[a-zA-Z0-9]{6,10}" 
-          title="Senha obrigatória: 6 a 10 caracteres, com letras e com números" 
-        />
-        <i class="bx bxs-lock-alt"></i>
-      </div>
+            <div class="input-box">
+                <input 
+                    type="email" 
+                    placeholder="Email institucional" 
+                    required 
+                    pattern=".+@(unifoa\.edu\.br|foa\.org\.br)" 
+                    title="Use email institucional válido, obrigatório!" 
+                />
+                <i class="bx bxs-envelope"></i>
+            </div>
 
-      <div class="input-box">
-        <input 
-          type="tel" 
-          placeholder="Telefone (ex: +55 24 99823-0000)"
-          required 
-          pattern="\(\d{2}\)9\d{4}-\d{4}" 
-          title="Telefone obrigatório:+55 24 99823-2105" 
-        />
-        <i class="bx bxs-phone"></i>
-      </div>
+            <div class="input-box">
+                <input 
+                    type="password" 
+                    placeholder="Senha (6-10 caracteres)" 
+                    required 
+                    pattern="[a-zA-Z0-9]{6,10}" 
+                    title="Senha obrigatória: 6 a 10 caracteres, com letras e com números" 
+                />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
 
-      <div class="input-box">
-        <input 
-          type="text" 
-          placeholder="CEP (ex: 12345-678)" 
-          required 
-          pattern="\d{5}-\d{3}" 
-          title="CEP obrigatório: formato 12345-678" 
-        />
-        <i class="bx bxs-map"></i>
-      </div>
+            <div class="input-box">
+                <input 
+                    type="tel" 
+                    placeholder="Telefone (ex: +55 24 99823-0000)"
+                    required 
+                    pattern="\+55\s\d{2}\s9\d{4}-\d{4}" 
+                    title="Telefone obrigatório: +55 24 99823-0000" 
+                />
+                <i class="bx bxs-phone"></i>
+            </div>
 
-      <div class="input-box">
-        <input 
-          type="text" 
-          placeholder="CPF (ex: 000.000.000-00)" 
-          required 
-          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-          title="CPF obrigatório: formato 000.000.000-00" 
-        />
-        <i class="bx bxs-id-card"></i>
-      </div>
+            <div class="input-box">
+                <input 
+                    type="text" 
+                    placeholder="CEP (ex: 12345-678)" 
+                    required 
+                    pattern="\d{5}-\d{3}" 
+                    title="CEP obrigatório: formato 12345-678" 
+                />
+                <i class="bx bxs-map"></i>
+            </div>
 
-      <div class="remember-forgot">
-        <label><input type="checkbox" /> Lembrar </label>
-        <a href="#">Esqueci minha senha</a>
-      </div>
+            <div class="input-box">
+                <input 
+                    type="text" 
+                    inputmode="numeric"
+                    placeholder="CPF (ex: 000.000.000-00)" 
+                    required 
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                    title="CPF obrigatório: formato 000.000.000-00" 
+                />
+                <i class="bx bxs-id-card"></i>
+            </div>
 
-      <button type="submit" class="btn">Comece agora</button>
+            <div class="remember-forgot">
+                <label><input type="checkbox" /> Lembrar </label>
+                <a href="#">Esqueci minha senha</a>
+            </div>
 
-    </form>
-  </div>
+            <button type="submit" class="btn">Comece agora</button>
+        </form>
+    </div>
 </body>
 </html>
