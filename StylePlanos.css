@@ -1,158 +1,143 @@
-body {
-
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background: transparent;
-color: #212529;
-text-align: center;
-background-color: transparent;
-}
-
-
-.Prisec {
-  min-height: 100vh; /* Faz a seção ocupar toda a altura da tela */
-  padding-top: 140px; /* ESSA ALTURA AQUI é o que resolve */
-  padding-bottom: 50px;
-  /* background: #f5fdf8; */ /* Remova ou comente esta linha */
-  text-align: center;
-  background-color: transparent;
-  position: relative;
-  overflow: hidden;
-}
 
 * {
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color: transparent
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: transparent;
+  color: #212529;
+  text-align: center;
+}
+
+.Prisec {
+  min-height: 100vh;
+  padding: 140px 10px 50px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: transparent;
+}
+
+.Prisec h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 40px;
+  background-color: transparent;
+}
 
 
 .header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 10;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 2rem;
-background: transparent;
-background-color: transparent
-}
-
-.header .imlog  {
-
-width:50px ;
-height: auto;
-margin-right: 10px;
-
-}
-
-.logoo {
-display: flex;
-font-size: 2rem;
-font-weight: bold;
-color: #0dac54;
-text-shadow: 2px 2px 4px #000000;
-
-}
-
-
-
-.nav a {
-
-margin-left: 1.2rem;
-text-decoration: none;
-color: #ffffff;
-font-weight: 500;
-text-shadow: 2px 2px 4px #000000;
-
-}
-
-.nav .btn {
-
-background-color: #2d5d3d;
-color: #fff;
-padding: 0.5rem 1rem;
-border-radius: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0; 
-  background-color:transparent 
-
+  gap: 0;
+  background-color: transparent;
 }
 
-.Prisec h1 {
-color: #fff;
-font-size: 4rem;
-margin-bottom: 40px;
-background-color: transparent
+.header .imlog {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
+
+.logoo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0dac54;
+  text-shadow: 2px 2px 4px #000;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.nav .btn {
+  background-color: #2d5d3d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav .btn:hover {
+  background-color: #1f3a25;
+  cursor: pointer;
+}
+
 
 .cards-container {
-
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 30px;
-background-color: transparent
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background-color: transparent;
 }
 
 .card {
-
-background-color: #f8f9fa;
-border-radius: 16px;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-padding: 30px;
-width: 250px;
-transition: transform 0.3s ease;
-border: 1px solid black;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 250px;
+  border: 1px solid black;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-
-transform: translateY(-5px);
-
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
 .logo {
-
-width: 120px;
-height: 120px;
-margin-bottom: 20px;
-
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
 }
 
 .card h2 {
-
-font-size: 1.5rem;
-margin: 10px 0;
-
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 .preco {
-
-font-size: 2rem;
-font-weight: bold;
-margin: 5px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px 0;
 }
 
 .mes {
-
-font-size: 1rem;
-color: #6c757d;
-margin-bottom: 20px;
-
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
 }
+
 button {
   background-color: white;
   border: 2px solid #2e7d32;
@@ -162,29 +147,28 @@ button {
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
-
 }
 
 button:hover {
   background-color: #2e7d32;
   color: white;
-
 }
 
+
 .video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 1; /* ajuste a transparência como quiser */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
 }
 
 .Prisec > *:not(.video-bg) {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsividade para telas menores */
@@ -197,7 +181,6 @@ button:hover {
   }
   .nav {
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
@@ -212,13 +195,11 @@ button:hover {
     font-size: 1.5rem;
   }
   .Prisec {
-    padding-top: 180px; /* Aumente para garantir espaço para o header fixo */
+    padding-top: 180px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 40px;
     min-height: 60vh;
-    text-align: center;
-    justify-content: center;
   }
   .cards-container {
     flex-direction: column;
@@ -243,7 +224,7 @@ button:hover {
     font-size: 1.2rem;
   }
   .Prisec {
-    padding-top: 160px; /* Aumente para garantir espaço para o header fixo */
+    padding-top: 160px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 30px;
