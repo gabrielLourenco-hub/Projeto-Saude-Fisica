@@ -9,110 +9,82 @@
 </head>
 <body>
 
-
-<!--esse é o cabeçalho, a parte de cima onde fica os botões da home e que vai nos enviar para outras pag-->
-
+    <!-- Cabeçalho com logo e navegação principal -->
     <header class="header">
-        
-      <div class="logo-container">
-        
-  <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
-  <div class="logo">LifeHub</div>
+        <div class="logo-container">
+            <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="Logo do site">
+            <div class="logo">LifeHub</div>
+        </div>
 
-</div>
-        
-   
-        
-        <nav class="nav"> 
-  
-    <a href="IndexHome.html">Início</a>
-    <a href="IndexPlanos.html">Planos</a>
-    <a href="#">Nutrição</a>
-    <a href="IndexIMC.html">Calculadora IMC</a>
-    <a href="#">Treinos</a>
-    <a href="#">Blog</a>
-    <a href="IndexForm.html" class="btn">Comece Agora</a>
+        <nav class="nav">
+            <a href="IndexHome.html">Início</a>
+            <a href="IndexPlanos.html">Planos</a>
+            <a href="#">Nutrição</a>
+            <a href="IndexIMC.html">Calculadora IMC</a>
+            <a href="#">Treinos</a>
+            <a href="#">Blog</a>
+            <a href="IndexForm.html" class="btn">Comece Agora</a>
         </nav>
-
     </header>
 
-<!--agora entra o corpo principal da home (hero)
+    <!-- Seção “hero” com imagem de fundo -->
+    <section class="hero">
+        <div class="hero-conteudo">
+            <h1>
+                Transforme seu <strong class="textao">Corpo</strong> e sua <strong class="textao">Alimentação</strong>
+            </h1>
 
-section é a imagem de fundo do site
+            <p class="shad">
+                Alcance seus objetivos com <strong>nossos</strong> planos personalizados e orientação especializada
+            </p>
 
-div é a area interna onde tem o titulo a descrição e o botão
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+    </section>
 
-a e o botao saiba mais (todos os botoes importantes terão btn para possuirem o mesmo css) 
+    <!-- Carrossel de vídeos do YouTube -->
+    <section class="carrossel-videos">
+        <div class="video-slide active">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XNLQtWdk6fc?si=B2k_NQ-48IHKscGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-slide">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oSt6GsSw6VI?si=uKfMczR9YkTsBrsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-slide">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fvqVpYuCA7o?si=PJ4G5o5p6KpC8hDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <button class="carrossel-btn prev" onclick="mudarVideo(-1)">&#10094;</button>
+        <button class="carrossel-btn next" onclick="mudarVideo(1)">&#10095;</button>
+    </section>
 
-class textao estou utilizando para decorar palavras especificas
--->
+    <!-- Seção de vantagens / recursos -->
+    <section class="vantagens">
+        <div class="vantagem">
+            <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/task.png" alt="Planos">
+            <h3>Planos Personalizados</h3>
+            <p>Com nossos planos personalizados, <br>adaptados às suas necessidades e metas individuais</p>
+        </div>
 
-<section class="hero">
+        <div class="vantagem">
+            <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/apple.png" alt="Nutrição">
+            <h3>Dicas de Nutrição</h3>
+            <p>Orientação sobre alimentação saudável para maximizar seus resultados</p>
+        </div>
 
-<div class="hero-conteudo">
+        <div class="vantagem">
+            <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/dumbbell.png" alt="Treinos">
+            <h3>Treinos Eficazes</h3>
+            <p>Exercícios para todos os níveis, projetados por profissionais</p>
+        </div>
+    </section>
 
-<h1>
-    Transforme seu <strong class="textao"> Corpo </strong> e sua <strong class="textao"> Alimentação </strong>
-</h1>
+    <!-- Seção do blog -->
+    <section class="blog">
+        <img class="icon" src="imagens/book.png" alt="Blog">
+        <h3>Blog</h3>
+        <p>Artigos e dicas sobre saúde, bem‑estar e fitness</p>
+    </section>
 
-<p class="shad">Alcance seus objetivos com nosso planos personalizados e orientação especializada</p>
-
-<a href="#" class="btn">Saiba Mais</a>
-
-</div>
-
-</section>
-
-<!-- Carrossel de Vídeos do YouTube -->
-<section class="carrossel-videos">
-  <div class="video-slide active">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/XNLQtWdk6fc?si=B2k_NQ-48IHKscGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <div class="video-slide">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/oSt6GsSw6VI?si=uKfMczR9YkTsBrsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <div class="video-slide">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fvqVpYuCA7o?si=PJ4G5o5p6KpC8hDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <button class="carrossel-btn prev" onclick="mudarVideo(-1)">&#10094;</button>
-  <button class="carrossel-btn next" onclick="mudarVideo(1)">&#10095;</button>
-</section>
-
-<!--Agora vamos por aqueles exemplos de recursos que nosso site possui, com dicas de nutrição e treinos eficazes por exemplo.-->
-
-<section class="vantagens">
-
-  <div class="vantagem">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/task.png" alt="Planos">
-    <h3>Planos Personalizados</h3>
-    <p>Com nossos planos personalizados adaptamos suas necessidades e metas individuais</p>
-  </div>
-
-  <div class="vantagem">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/apple.png" alt="Nutrição">
-    <h3>Dicas de Nutrição</h3>
-    <p>Orientação sobre alimentação saudável para maximizar seus resultados</p>
-  </div>
-
-  <div class="vantagem">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/dumbbell.png" alt="Treinos">
-    <h3>Treinos Eficazes</h3>
-    <p>Exercícios para todos os níveis, projetado por profissionais</p>
-  </div>
-
-</section>
-
-    
-<section class="blog">
-
-<img class="icon" src="imagens/book.png" alt="blog">
-
-<h3>Blog</h3>
-<p>Artigos e dicas sobre saúde, bem-estar e fitness</p>
-
-</section>
-
-<script src="ScriptHome.js"></script>
-
+    <script src="ScriptHome.js"></script>
 </body>
 </html>
