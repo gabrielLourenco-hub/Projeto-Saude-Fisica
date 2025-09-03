@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,23 +8,39 @@
   <link rel="stylesheet" href="StyleIMC.css" />
   <link rel="icon" href="imagens/favicon.ico" />
 </head>
+
 <body>
 
-  <!-- Cabeçalho -->
   <header class="header">
-    <div class="logo-container">
-      <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site" />
-      <div class="logoo">LifeHub</div>
+    <div class="header-container">
+      <div class="logo-container">
+        <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
+        <div class="logo-text">LifeHub</div>
+      </div>
+
+      <!-- Menu Hambúrguer -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu de Navegação -->
+      <nav class="nav">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="IndexHome.html">Início</a></li>
+          <li><a href="IndexPlanos.html">Planos</a></li>
+          <li><a href="#">Nutrição</a></li>
+          <li><a href="IndexIMC.html" class="active">Calculadora IMC</a></li>
+          <li><a href="#">Treinos</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="IndexForm.html" class="btn-nav">Comece Agora</a></li>
+        </ul>
+      </nav>
+
+      <!-- Overlay para fechar menu -->
+      <div class="menu-overlay" id="menu-overlay"></div>
     </div>
-    <nav class="nav">
-      <a href="IndexHome.html">Início</a>
-      <a href="IndexPlanos.html">Planos</a>
-      <a href="#">Nutrição</a>
-      <a href="IndexIMC.html">Calculadora IMC</a>
-      <a href="#">Treinos</a>
-      <a href="#">Blog</a>
-      <a href="IndexForm.html" class="btn">Comece Agora</a>
-    </nav>
   </header>
 
   <!-- Conteúdo principal -->
@@ -108,5 +125,61 @@
     </section>
   </main>
 
+  <script>
+    // Script para controle do menu hambúrguer
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+      const navLinks = document.querySelectorAll('.nav-menu a');
+
+      // Função para abrir/fechar menu
+      function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+
+        // Prevenir scroll do body quando menu estiver aberto
+        if (navMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Função para fechar menu
+      function closeMenu() {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Event listeners
+      hamburger.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+
+      // Fechar menu ao clicar em um link
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Fechar menu com ESC
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      // Fechar menu ao redimensionar para desktop
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+
 </body>
+
 </html>
