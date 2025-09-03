@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,37 +8,42 @@
   <link rel="stylesheet" href="StylePlanos.css" />
   <link rel="icon" href="imagens/favicon.ico" />
 </head>
+
 <body>
   <header class="header">
-    <div class="logo-container">
-      <img
-        class="imlog"
-        src="imagens/android-chrome-512x512-removebg-preview.png"
-        alt="Logo do site LifeHub"
-      />
-      <div class="logoo">LifeHub</div>
-    </div>
+    <div class="header-container">
+      <div class="logo-container">
+        <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
+        <div class="logo-text">LifeHub</div>
+      </div>
 
-    <nav class="nav">
-      <a href="IndexHome.html">Início</a>
-      <a href="IndexPlanos.html">Planos</a>
-      <a href="#">Nutrição</a>
-      <a href="IndexIMC.html">Calculadora IMC</a>
-      <a href="#">Treinos</a>
-      <a href="#">Blog</a>
-      <a href="IndexForm.html" class="btn">Comece Agora</a>
-    </nav>
+      <!-- Menu Hambúrguer -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu de Navegação -->
+      <nav class="nav">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="IndexHome.html">Início</a></li>
+          <li><a href="IndexPlanos.html" class="active">Planos</a></li>
+          <li><a href="#">Nutrição</a></li>
+          <li><a href="IndexIMC.html">Calculadora IMC</a></li>
+          <li><a href="#">Treinos</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="IndexForm.html" class="btn-nav">Comece Agora</a></li>
+        </ul>
+      </nav>
+
+      <!-- Overlay para fechar menu -->
+      <div class="menu-overlay" id="menu-overlay"></div>
+    </div>
   </header>
 
   <section class="Prisec">
-    <video
-      autoplay
-      loop
-      muted
-      playsinline
-      class="video-bg"
-      aria-label="Vídeo de fundo com cenas relacionadas a saúde e bem-estar"
-    >
+    <video autoplay loop muted playsinline class="video-bg" aria-label="Vídeo de fundo com cenas relacionadas a saúde e bem-estar">
       <source src="video/4945155-uhd_4096_2160_24fps.mp4" type="video/mp4" />
       Seu navegador não suporta o elemento de vídeo.
     </video>
@@ -46,11 +52,7 @@
 
     <div class="cards-container">
       <div class="card">
-        <img
-          src="imagens/android-chrome-512x512-removebg-preview.png"
-          alt="Ícone do plano Básico"
-          class="logo"
-        />
+        <img src="imagens/android-chrome-512x512-removebg-preview.png" alt="Ícone do plano Básico" class="logo" />
         <h2>Básico</h2>
         <p class="preco">R$ 29</p>
         <p class="mes">/mês</p>
@@ -58,11 +60,7 @@
       </div>
 
       <div class="card">
-        <img
-          src="imagens/android-chrome-512x512-removebg-preview.png"
-          alt="Ícone do plano Padrão"
-          class="logo"
-        />
+        <img src="imagens/android-chrome-512x512-removebg-preview.png" alt="Ícone do plano Padrão" class="logo" />
         <h2>Padrão</h2>
         <p class="preco">R$ 59</p>
         <p class="mes">/mês</p>
@@ -70,11 +68,7 @@
       </div>
 
       <div class="card">
-        <img
-          src="imagens/android-chrome-512x512-removebg-preview.png"
-          alt="Ícone do plano Avançado"
-          class="logo"
-        />
+        <img src="imagens/android-chrome-512x512-removebg-preview.png" alt="Ícone do plano Avançado" class="logo" />
         <h2>Avançado</h2>
         <p class="preco">R$ 89</p>
         <p class="mes">/mês</p>
@@ -84,5 +78,60 @@
   </section>
 
   <script src="ScriptP.js"></script>
+  <script>
+    // Script para controle do menu hambúrguer
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+      const navLinks = document.querySelectorAll('.nav-menu a');
+
+      // Função para abrir/fechar menu
+      function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+
+        // Prevenir scroll do body quando menu estiver aberto
+        if (navMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Função para fechar menu
+      function closeMenu() {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Event listeners
+      hamburger.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+
+      // Fechar menu ao clicar em um link
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Fechar menu com ESC
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      // Fechar menu ao redimensionar para desktop
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
