@@ -203,66 +203,20 @@ body {
   text-decoration: none;
 }
 
-.vantagens {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.vantagem {
-  max-width: 250px;
-  margin: 20px;
-}
-
-.vantagem img {
-  width: 70px;
-  margin: 30px auto;
-}
-
-.vantagem h3 {
-  color: #2d5d3d;
-  margin-bottom: 10px;
-}
-
-.vantagem p {
-  font-size: 17px;
-  color: #555;
-}
-
-.blog {
-  text-align: center;
-  padding: 20px 50px;
-}
-
-.blog img {
-  width: 90px;
-  margin-bottom: 30px;
-}
-
-.blog h3 {
-  color: #2d5d3d;
-  margin-bottom: 10px;
-}
-
-.blog p {
-  color: #555;
-  font-size: 17px;
-}
-
 .shad {
   text-shadow: 2px 2px 4px #000;
 }
 
-.carrossel-videos {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 40px auto 0 auto;
+.aprenda {
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: 0 auto;
+}
+
+.carrossel-videos {
+  flex-grow: 2;
+  position: relative;
+  max-width: 600px;
 }
 
 .video-slide {
@@ -303,6 +257,34 @@ body {
 .carrossel-btn.next {
   right: 10px;
 }
+
+.vantagens {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.blog {
+  text-align: center;
+  padding: 20px 50px;
+}
+
+.blog img {
+  width: 90px;
+  margin-bottom: 30px;
+}
+
+.blog h3 {
+  color: #2d5d3d;
+  margin-bottom: 10px;
+}
+
+.blog p {
+  color: #555;
+  font-size: 17px;
+}
+
 
 /* Desktop - min-width: 768px */
 @media (min-width: 768px) {
@@ -361,7 +343,7 @@ body {
   }
 }
 
-.card {
+.vantagens-card {
   position: relative;
   display: flex;
   align-items: center;
@@ -441,18 +423,18 @@ body {
   text-decoration: underline;
 }
 
-.card:hover {
+.vantagens-card:hover {
   transform: translate(0px, -16px);
 }
 
-.card:hover .content::before {
+.vantagens-card:hover .content::before {
   rotate: -8deg;
   top: 0;
   width: 100%;
   height: 100%;
 }
 
-.card:hover .content::after {
+.vantagens-card:hover .content::after {
   rotate: 8deg;
   top: 0;
   width: 100%;
