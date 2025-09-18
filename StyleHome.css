@@ -21,7 +21,7 @@ body {
   background: #2d5d3d;
   color: white;
   padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -127,11 +127,11 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav-menu .btn-nav {
-  background-color: #2d5d3d;
+  background-color: #4caf50;
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -139,7 +139,7 @@ body {
 }
 
 .nav-menu .btn-nav:hover {
-  background-color: #1a3a26;
+  background-color: #4caf50;
 }
 
 /* Overlay para fechar menu */
@@ -150,7 +150,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
@@ -160,10 +160,7 @@ body {
 
 .hero {
   height: 100vh;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg);
   background-size: cover;
   background-position: center;
@@ -289,15 +286,20 @@ body {
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.content img {
+  width: 48px;
+  height: 48px;
+}
+
 .content::before {
   position: absolute;
-  content: "";
+  content: '';
   top: -4%;
   left: 50%;
   width: 90%;
   height: 90%;
   transform: translate(-50%);
-  background: #67C090;
+  background: #67c090;
   z-index: -1;
   transform-origin: bottom;
 
@@ -307,13 +309,13 @@ body {
 
 .content::after {
   position: absolute;
-  content: "";
+  content: '';
   top: -8%;
   left: 50%;
   width: 80%;
   height: 80%;
   transform: translate(-50%);
-  background: #A8FBD3;
+  background: #a8fbd3;
   z-index: -2;
   transform-origin: bottom;
   border-radius: inherit;
@@ -363,15 +365,9 @@ body {
   height: 100%;
 }
 
-
 .blog {
   text-align: center;
   padding: 20px 50px;
-}
-
-.blog img {
-  width: 90px;
-  margin-bottom: 30px;
 }
 
 .blog h3 {
@@ -384,7 +380,6 @@ body {
   font-size: 17px;
 }
 
-
 /* Desktop - min-width: 768px */
 @media (min-width: 768px) {
   .header-container {
@@ -392,19 +387,19 @@ body {
     margin: 0;
     padding: 0 2rem;
   }
-  
+
   .logo-container .imlog {
     width: 50px;
   }
-  
+
   .logo-text {
     font-size: 1.8rem;
   }
-  
+
   .hamburger {
     display: none;
   }
-  
+
   .nav-menu {
     position: static;
     width: auto;
@@ -415,30 +410,29 @@ body {
     gap: 2rem;
     right: auto;
   }
-  
+
   .nav-menu li {
     margin: 0;
   }
-  
+
   .nav-menu a {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     margin: 0;
   }
-  
+
   .nav-menu .btn-nav {
-    background-color: #2d5d3d;
+    background-color: #008000;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin: 0;
   }
-  
+
   .nav-menu .btn-nav:hover {
-    background-color: #1a3a26;
+    background-color: #4caf50;
   }
-  
+
   .menu-overlay {
     display: none !important;
   }
 }
-

@@ -147,7 +147,7 @@ body {
 }
 
 .nav-menu .btn-nav {
-  background-color: #2d5d3d;
+  background-color: #4caf50;
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -343,14 +343,14 @@ body {
   }
   
   .nav-menu .btn-nav {
-    background-color: #2d5d3d;
+    background-color: #008000;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin: 0;
   }
   
   .nav-menu .btn-nav:hover {
-    background-color: #1a3a26;
+    background-color: #4caf50;
   }
   
   .menu-overlay {
