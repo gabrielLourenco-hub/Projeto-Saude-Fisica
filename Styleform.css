@@ -68,6 +68,15 @@ body {
   color: white;
 }
 
+.logo-container a {
+  text-decoration: none;
+}
+
+.logo-container a:hover .logo-text {
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
 /* Menu Hambúrguer - Mobile First */
 .hamburger {
   display: flex;

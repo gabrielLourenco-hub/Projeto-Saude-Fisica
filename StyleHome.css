@@ -50,6 +50,16 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  text-decoration: none;
+}
+
+.logo-container a {
+  text-decoration: none;
+}
+
+.logo-container a:hover .logo-text {
+  color: #f0f0f0;
+  transition: color 0.3s ease;
 }
 
 /* Menu Hambúrguer - Mobile First */
@@ -394,6 +404,7 @@ body {
 
   .logo-text {
     font-size: 1.8rem;
+    text-decoration: none;
   }
 
   .hamburger {
