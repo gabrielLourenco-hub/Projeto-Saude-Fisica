@@ -93,10 +93,11 @@ h3 {
 .header {
   position: sticky;
   top: 0;
-  background: #faf8f3; /* cor pedida */
+  background: #faf8f3;
   border-bottom: 1px solid #eeeeee;
-  z-index: 10;
+  z-index: 100;
 }
+
 .header-container {
   width: 92%;
   max-width: 1200px;
@@ -106,10 +107,12 @@ h3 {
   justify-content: space-between;
   padding: 8px 0;
 }
+
 .logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 101;
 }
 
 .header .imlog {
@@ -123,21 +126,58 @@ h3 {
   color: #111;
   text-decoration: none;
 }
+
+/* Menu Hambúrguer - Escondido por padrão */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 102;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #111;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menu de navegação */
 .nav-menu {
   display: flex;
   gap: 12px;
   list-style: none;
 }
+
 .nav-menu a {
   color: #111;
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
   border-radius: 8px;
+  transition: background 0.3s ease;
 }
+
 .nav-menu a:hover {
   background: rgba(0, 0, 0, 0.06);
 }
+
 .btn-nav {
   border: 2px solid #111;
   border-radius: 10px;
@@ -145,15 +185,37 @@ h3 {
   font-weight: 700;
 }
 
-/* Responsividade do Header */
+/* ===========================
+   RESPONSIVIDADE DO HEADER
+=========================== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .header-container {
+    width: 95%;
+    padding: 10px 0;
+  }
+
+  .nav-menu {
+    gap: 8px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .btn-nav {
+    padding: 6px 12px;
+  }
+}
+
+/* Mobile (até 768px) */
 @media (max-width: 768px) {
   .header-container {
     width: 95%;
     padding: 12px 0;
-  }
-
-  .nav-menu {
-    display: none; /* Esconde o menu em mobile por enquanto */
+    position: relative;
   }
 
   .logo-text {
@@ -162,6 +224,74 @@ h3 {
 
   .header .imlog {
     width: 35px;
+  }
+
+  /* Mostra o hambúrguer no mobile */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Transforma o menu em menu mobile */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #faf8f3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    gap: 0;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    display: flex;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-menu a {
+    width: 90%;
+    padding: 15px 20px;
+    font-size: 18px;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .btn-nav {
+    background: #067a45;
+    color: white;
+    border: 2px solid #067a45;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin: 20px auto 0;
+    font-weight: 700;
+    width: 90%;
+    max-width: 200px;
+    text-align: center;
+    display: block;
+  }
+
+  .btn-nav:hover {
+    background: #055a35;
+    border-color: #055a35;
   }
 }
 
@@ -224,6 +354,7 @@ h3 {
   background: #1d1d1f;
   color: #f2f2f2;
   text-decoration: none;
+  margin-top: 24px;
 }
 .btn-primary-step:hover {
   background: #444;
@@ -252,38 +383,86 @@ h3 {
   height: 260px;
   border: 8px solid #fff;
 }
-@media (max-width: 900px) {
+/* ===========================
+   RESPONSIVIDADE HERO
+=========================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
   .hero-inner {
-    grid-template-columns: 1fr;
     gap: 40px;
-    padding: 80px 0 60px;
+    padding: 60px 0 40px;
   }
+
+  .hero .display-title {
+    font-size: 48px;
+  }
+
   .hero-art img {
     width: 280px;
     height: 280px;
   }
+
   .hero-art img:nth-child(2) {
-    position: relative;
-    right: auto;
-    bottom: auto;
     width: 220px;
     height: 220px;
-    margin-top: 16px;
   }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 0 40px;
+    text-align: center;
+  }
+
+  .hero-art {
+    order: -1;
+    position: relative;
+    display: grid;
+    justify-items: center;
+  }
+
+  .hero-art img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-art img:nth-child(2) {
+    position: absolute;
+    right: 8%;
+    bottom: -10%;
+    width: 160px;
+    height: 160px;
+    border: 6px solid #fff;
+  }
+
   h1,
   .display-title {
-    font-size: 40px;
+    font-size: 32px !important;
+    margin-top: 20px;
     margin-bottom: 20px;
+    line-height: 1.1;
   }
+
   h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
+
   h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
+
   .lead {
     font-size: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 16px;
   }
 }
 
@@ -361,11 +540,57 @@ h3 {
   color: #444;
 }
 
-@media (max-width: 900px) {
+/* ===========================
+   RESPONSIVIDADE BENEFITS
+=========================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .benefit-row {
+    gap: 40px;
+    margin: 50px 0;
+  }
+
+  .benefit-image {
+    flex: 0 0 400px;
+    width: 400px;
+  }
+
+  .benefit-image img {
+    height: 300px;
+  }
+
+  .benefit-text h3 {
+    font-size: 28px;
+  }
+
+  .benefit-text p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-benefits {
+    padding: 40px 0;
+  }
+
+  .section-benefits .intro {
+    margin-bottom: 30px;
+  }
+
+  .section-benefits .intro h2 {
+    font-size: 28px;
+  }
+
+  .section-benefits .intro p {
+    font-size: 16px;
+  }
+
   .benefit-row {
     flex-direction: column !important;
-    gap: 30px;
-    margin: 40px 0;
+    gap: 25px;
+    margin: 30px 0;
     text-align: center;
   }
 
@@ -381,7 +606,7 @@ h3 {
   }
 
   .benefit-image img {
-    height: 280px;
+    height: 250px;
   }
 
   .benefit-text {
@@ -389,7 +614,8 @@ h3 {
   }
 
   .benefit-text h3 {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 12px;
   }
 
   .benefit-text p {
@@ -447,9 +673,64 @@ h3 {
   font-size: 15px;
   opacity: 0.9;
 }
-@media (max-width: 900px) {
+/* ===========================
+   RESPONSIVIDADE STEPS
+=========================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .section-steps {
+    padding: 35px 0 60px;
+  }
+
+  .steps-grid {
+    gap: 24px;
+  }
+
+  .step-media img {
+    height: 170px;
+  }
+
+  .step-card h4 {
+    font-size: 17px;
+  }
+
+  .step-card p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-steps {
+    padding: 30px 0 50px;
+  }
+
+  .section-steps .title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
   .steps-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .step-card {
+    text-align: center;
+  }
+
+  .step-media img {
+    height: 200px;
+  }
+
+  .step-card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .step-card p {
+    font-size: 15px;
   }
 }
 
@@ -496,21 +777,18 @@ h3 {
   justify-content: center;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(6, 122, 69, 0.3);
   z-index: 2;
 }
 
 .carousel-btn:hover {
   background: #055a35;
-  transform: scale(1.1);
 }
 
 .carousel-btn:disabled {
   background: #ccc;
   cursor: not-allowed;
   box-shadow: none;
-  transform: none;
 }
 
 .video-container {
@@ -575,11 +853,62 @@ h3 {
   background: #999;
 }
 
-/* Responsividade do carrossel */
+/* ===========================
+   RESPONSIVIDADE DO CARROSSEL
+=========================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .section-videos {
+    padding: 60px 0;
+  }
+
+  .section-videos h2 {
+    font-size: 28px;
+  }
+
+  .section-videos p {
+    font-size: 16px;
+  }
+
+  .video-container {
+    max-width: 700px;
+  }
+
+  .video-slide {
+    min-width: 250px;
+  }
+
+  .video-slide iframe {
+    height: 180px;
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .section-videos {
+    padding: 40px 0;
+  }
+
+  .section-videos h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .section-videos p {
+    font-size: 16px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+
   .video-carousel {
-    flex-direction: column;
-    gap: 20px;
+    position: relative;
+    padding: 0 60px;
   }
 
   .carousel-btn {
@@ -587,30 +916,44 @@ h3 {
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
+    width: 45px;
+    height: 45px;
   }
 
   .prev-btn {
-    left: -25px;
+    left: 10px;
   }
 
   .next-btn {
-    right: -25px;
+    right: 10px;
   }
 
   .video-container {
     max-width: 100%;
+    justify-content: flex-start;
+    padding-left: 20px;
   }
 
   .video-slide {
-    min-width: 280px;
+    min-width: 250px;
   }
 
   .video-slide iframe {
-    height: 180px;
+    height: 160px;
   }
 
-  .section-videos {
-    padding: 60px 0;
+  .video-slide h4 {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .carousel-indicators {
+    margin-top: 25px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
   }
 }
 
