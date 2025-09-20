@@ -115,12 +115,17 @@ h3 {
   z-index: 101;
 }
 
+.logo-container a {
+  text-decoration: none;
+}
+
 .header .imlog {
   width: 40px;
   height: auto;
 }
 
 .logo-text {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 900;
   font-size: 24px;
   color: #111;
@@ -189,6 +194,17 @@ h3 {
    RESPONSIVIDADE DO HEADER
 =========================== */
 
+/* Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+  .header .imlog {
+    width: 50px;
+  }
+  .logo-text {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;
+  }
+}
+
 /* Tablet (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .header-container {
@@ -219,6 +235,7 @@ h3 {
   }
 
   .logo-text {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
   }
 

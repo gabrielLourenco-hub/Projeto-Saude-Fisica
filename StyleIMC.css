@@ -64,6 +64,10 @@ body {
   z-index: 101;
 }
 
+.logo-container a {
+  text-decoration: none;
+}
+
 .header .imlog {
   width: 40px;
   height: auto;
