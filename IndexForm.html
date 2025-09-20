@@ -2,147 +2,89 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comece agora</title>
-    <link rel="stylesheet" href="Styleform.css">
-    <link rel="icon" href="imagens/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comece agora</title>
+  <link rel="stylesheet" href="Styleform.css"/>
+  <link rel="icon" href="imagens/favicon.ico"/>
 </head>
 
 <body>
+  <!-- HEADER (o seu, exatamente como enviado) -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
+        <a href="IndexHome.html" class="logo-text">LifeHub</a>
+      </div>
 
-    <!-- Cabeçalho do site com os botões de navegação para outras páginas -->
+      <!-- Menu Hambúrguer (só aparece no mobile) -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <header class="header">
-        <div class="header-container">
-            <div class="logo-container">
-                <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
-                <a href="IndexHome.html">
-                    <div class="logo-text">LifeHub</div>
-                </a>
-            </div>
-
-            <!-- Menu Hambúrguer -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- Menu de Navegação -->
-            <nav class="nav">
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="IndexHome.html">Início</a></li>
-                    <li><a href="IndexPlanos.html">Planos</a></li>
-                    <li><a href="#">Nutrição</a></li>
-                    <li><a href="IndexIMC.html">Calculadora IMC</a></li>
-                    <li><a href="#">Treinos</a></li>
-                    <li><a href="IndexForm.html" class="btn-nav active">Comece Agora</a></li>
-                </ul>
-            </nav>
-
-            <!-- Overlay para fechar menu -->
-            <div class="menu-overlay" id="menu-overlay"></div>
-        </div>
-    </header>
-
-    <div class="wrapper">
-        <form>
-            <h1>Cadastre-se</h1>
-
-            <div class="input-box">
-                <input type="text" placeholder="Nome completo" required pattern="[A-Za-zÀ-ÿ ]+" title="Preencha apenas com letras e espaços, obrigatório" />
-                <i class="bx bxs-user"></i>
-            </div>
-
-            <div class="input-box">
-                <input type="email" placeholder="Email institucional" required pattern=".+@(unifoa\.edu\.br|foa\.org\.br)" title="Use email institucional válido, obrigatório!" />
-                <i class="bx bxs-envelope"></i>
-            </div>
-
-            <div class="input-box">
-                <input type="password" placeholder="Senha (6-10 caracteres)" required pattern="[a-zA-Z0-9]{6,10}" title="Senha obrigatória: 6 a 10 caracteres, com letras e com números" />
-                <i class="bx bxs-lock-alt"></i>
-            </div>
-
-            <div class="input-box">
-                <input type="tel" placeholder="Telefone (ex: +55 24 99823-0000)" required pattern="\+55\s\d{2}\s9\d{4}-\d{4}" title="Telefone obrigatório: +55 24 99823-0000" />
-                <i class="bx bxs-phone"></i>
-            </div>
-
-            <div class="input-box">
-                <input type="text" placeholder="CEP (ex: 12345-678)" required pattern="\d{5}-\d{3}" title="CEP obrigatório: formato 12345-678" />
-                <i class="bx bxs-map"></i>
-            </div>
-
-            <div class="input-box">
-                <input type="text" inputmode="numeric" placeholder="CPF (ex: 000.000.000-00)" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="CPF obrigatório: formato 000.000.000-00" />
-                <i class="bx bxs-id-card"></i>
-            </div>
-
-            <div class="remember-forgot">
-                <label><input type="checkbox" /> Lembrar </label>
-                <a href="#">Esqueci minha senha</a>
-            </div>
-
-            <button type="submit" class="btn">Comece agora</button>
-        </form>
+      <!-- Menu de navegação -->
+      <nav class="nav">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="IndexHome.html">Início</a></li>
+          <li><a href="IndexPlanos.html">Planos</a></li>
+          <li><a href="#nutrition">Nutrição</a></li>
+          <li><a href="IndexIMC.html">Calculadora IMC</a></li>
+          <li><a href="#workouts">Treinos</a></li>
+          <li><a href="IndexForm.html" class="btn-nav">Comece Agora</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        // Script para controle do menu hambúrguer
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            const menuOverlay = document.getElementById('menu-overlay');
-            const navLinks = document.querySelectorAll('.nav-menu a');
+  <!-- Overlay (criado no HTML para evitar inline styles no JS) -->
+  <div class="menu-overlay" id="menu-overlay" hidden></div>
 
-            // Função para abrir/fechar menu
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                menuOverlay.classList.toggle('active');
+  <div class="wrapper">
+    <form>
+      <h1>Cadastre-se</h1>
 
-                // Prevenir scroll do body quando menu estiver aberto
-                if (navMenu.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = 'auto';
-                }
-            }
+      <div class="input-box">
+        <input type="text" placeholder="Nome completo" required pattern="[A-Za-zÀ-ÿ ]+" title="Preencha apenas com letras e espaços, obrigatório" />
+        <i class="bx bxs-user"></i>
+      </div>
 
-            // Função para fechar menu
-            function closeMenu() {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+      <div class="input-box">
+        <input type="email" placeholder="Email institucional" required pattern=".+@(unifoa\.edu\.br|foa\.org\.br)" title="Use email institucional válido, obrigatório!" />
+        <i class="bx bxs-envelope"></i>
+      </div>
 
-            // Event listeners
-            hamburger.addEventListener('click', toggleMenu);
-            menuOverlay.addEventListener('click', closeMenu);
+      <div class="input-box">
+        <input type="password" placeholder="Senha (6-10 caracteres)" required pattern="[a-zA-Z0-9]{6,10}" title="Senha obrigatória: 6 a 10 caracteres, com letras e com números" />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
 
-            // Fechar menu ao clicar em um link
-            navLinks.forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
+      <div class="input-box">
+        <input type="tel" placeholder="Telefone (ex: +55 24 99823-0000)" required pattern="\+55\s\d{2}\s9\d{4}-\d{4}" title="Telefone obrigatório: +55 24 99823-0000" />
+        <i class="bx bxs-phone"></i>
+      </div>
 
-            // Fechar menu com ESC
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    closeMenu();
-                }
-            });
+      <div class="input-box">
+        <input type="text" placeholder="CEP (ex: 12345-678)" required pattern="\d{5}-\d{3}" title="CEP obrigatório: formato 12345-678" />
+        <i class="bx bxs-map"></i>
+      </div>
 
-            // Fechar menu ao redimensionar para desktop
-            window.addEventListener('resize', function () {
-                if (window.innerWidth >= 768) {
-                    closeMenu();
-                }
-            });
-        });
-    </script>
+      <div class="input-box">
+        <input type="text" inputmode="numeric" placeholder="CPF (ex: 000.000.000-00)" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="CPF obrigatório: formato 000.000.000-00" />
+        <i class="bx bxs-id-card"></i>
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox" /> Lembrar </label>
+        <a href="#">Esqueci minha senha</a>
+      </div>
+
+      <button type="submit" class="btn">Comece agora</button>
+    </form>
+  </div>
+
+  <script src="ScriptForm.js"></script>
 </body>
-
 </html>
