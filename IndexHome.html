@@ -2,170 +2,200 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LifeHub</title>
+
+    <!-- Roboto para textos -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Seu CSS separado -->
     <link rel="stylesheet" href="StyleHome.css">
+
     <link rel="icon" href="imagens/favicon.ico">
 </head>
 
 <body>
 
-    <!-- Cabeçalho com logo e navegação principal -->
+    <!-- HEADER -->
     <header class="header">
         <div class="header-container">
             <div class="logo-container">
                 <img class="imlog" src="imagens/android-chrome-512x512-removebg-preview.png" alt="logo do site">
-                <a href="IndexHome.html">
-                    <div class="logo-text">LifeHub</div>
-                </a>
+                <a href="IndexHome.html" class="logo-text">LifeHub</a>
             </div>
 
-            <!-- Menu Hambúrguer -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- Menu de Navegação -->
-            <nav class="nav">
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="IndexHome.html" class="active">Início</a></li>
+            <!-- menu simples (você pode recolocar o hambúrguer/JS se quiser) -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="IndexHome.html">Início</a></li>
                     <li><a href="IndexPlanos.html">Planos</a></li>
-                    <li><a href="#">Nutrição</a></li>
+                    <li><a href="#nutrition">Nutrição</a></li>
                     <li><a href="IndexIMC.html">Calculadora IMC</a></li>
-                    <li><a href="#">Treinos</a></li>
+                    <li><a href="#workouts">Treinos</a></li>
                     <li><a href="IndexForm.html" class="btn-nav">Comece Agora</a></li>
                 </ul>
             </nav>
-
-            <!-- Overlay para fechar menu -->
-            <div class="menu-overlay" id="menu-overlay"></div>
         </div>
     </header>
 
-    <!-- Seção “hero” com imagem de fundo -->
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-conteudo">
-            <h1>
-                Transforme seu <strong class="textao">Corpo</strong> e sua <strong class="textao">Alimentação</strong>
-            </h1>
-
-            <p class="shad">
-                Alcance seus objetivos com <strong>nossos</strong> planos personalizados e orientação especializada
-            </p>
-
-            <a href="#" class="btn">Saiba Mais</a>
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <h1 class="display-title">Transforme seu Corpo e sua Alimentação</h1>
+                <p class="lead">Alcance seus objetivos com <strong>nossos</strong> planos personalizados e orientação especializada.</p>
+                <a href="IndexPlanos.html" class="btn btn-primary">Ver Planos & Preços</a>
+                <p class="mini">Planos flexíveis. Sem fidelidade. Cancele quando quiser.</p>
+            </div>
+            <div class="hero-art">
+                <img src="imagens/homepage/foto1.webp" alt="Prato 1">
+                <img src="imagens/homepage/foto2.webp" alt="Prato 2">
+            </div>
         </div>
     </section>
 
-    <section class="aprenda">
-        <div class="container-aprenda">
-            <!-- Carrossel de vídeos do YouTube -->
-            <div class="carrossel-videos">
-                <div class="video-slide active">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XNLQtWdk6fc?si=B2k_NQ-48IHKscGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="video-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oSt6GsSw6VI?si=uKfMczR9YkTsBrsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="video-slide">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fvqVpYuCA7o?si=PJ4G5o5p6KpC8hDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <button class="carrossel-btn prev" onclick="mudarVideo(-1)">&#10094;</button>
-                <button class="carrossel-btn next" onclick="mudarVideo(1)">&#10095;</button>
+    <!-- BENEFÍCIOS / ESTATÍSTICAS -->
+    <section class="section-benefits">
+        <div class="container">
+
+            <div class="intro">
+                <h2>Transforme sua vida com saúde e bem-estar</h2>
+                <p>Alcance seus objetivos de saúde com nossos planos personalizados, nutrição balanceada e treinos eficazes. Veja os resultados que nossos clientes conquistaram.</p>
             </div>
 
-            <!-- Seção de vantagens / recursos -->
-            <div class="vantagens">
-                <div class="vantagens-card">
-                    <div class="content">
-                        <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/task.png" alt="Planos">
-                        <h3>Planos Personalizados</h3>
-                        <p class="para">
-                            Com nossos planos personalizados,adaptados as suas necessidades e metas individuais
-                        </p>
+            <div class="benefit-row">
+                <div class="benefit-image">
+                    <img src="imagens/homepage/foto3.webp" alt="Mulher fazendo exercício">
+                </div>
+                <div class="benefit-text">
+                    <h3>89% melhoraram seu condicionamento físico</h3>
+                    <p>Com treinos personalizados e acompanhamento especializado, nossos clientes aumentaram força, resistência e disposição no dia a dia.</p>
+                </div>
+            </div>
+
+            <div class="benefit-row reverse">
+                <div class="benefit-image">
+                    <img src="imagens/homepage/foto2.webp" alt="Alimentação saudável">
+                </div>
+                <div class="benefit-text">
+                    <h3>94% adotaram hábitos alimentares mais saudáveis</h3>
+                    <p>Aprenda a fazer escolhas inteligentes com nossos planos nutricionais balanceados, sem abrir mão do sabor e praticidade.</p>
+                </div>
+            </div>
+
+            <div class="benefit-row">
+                <div class="benefit-image">
+                    <img src="imagens/homepage/foto5.webp" alt="Pessoa feliz e saudável">
+                </div>
+                <div class="benefit-text">
+                    <h3>92% relatam mais energia e disposição</h3>
+                    <p>A combinação perfeita entre exercícios regulares e alimentação equilibrada resulta em mais vitalidade para suas atividades diárias.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUA TRANSFORMAÇÃO EM 3 PASSOS -->
+    <section class="section-steps">
+        <div class="container">
+            <h2 class="title">Sua transformação em 3 passos simples</h2>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-media">
+                        <img src="imagens/homepage/foto6.webp" alt="Avaliação e planejamento">
+                    </div>
+                    <h4>1. Avaliação e Plano Personalizado</h4>
+                    <p>Analisamos seus objetivos, histórico de saúde e preferências para criar um plano único e eficaz para você.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-media">
+                        <img src="imagens/homepage/foto7.webp" alt="Nutrição e treino">
+                    </div>
+                    <h4>2. Nutrição + Treino Orientado</h4>
+                    <p>Receba cardápios balanceados e treinos progressivos com acompanhamento de especialistas em saúde.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-media">
+                        <img src="imagens/homepage/foto8.webp" alt="Resultados e mudança de vida">
+                    </div>
+                    <h4>3. Resultados Sustentáveis</h4>
+                    <p>Desenvolva hábitos duradouros e conquiste uma vida mais saudável, com energia e bem-estar a longo prazo.</p>
+                </div>
+            </div>
+            <a href="IndexPlanos.html" class="btn btn-primary-step">Ver Planos &amp; Preços</a>
+        </div>
+    </section>
+
+    <!-- CARROSSEL DE VÍDEOS -->
+    <section class="section-videos">
+        <div class="container">
+            <h2>Aprenda com nossos especialistas</h2>
+            <p>Descubra dicas valiosas sobre nutrição, treinos e bem-estar com conteúdos exclusivos dos nossos profissionais de saúde.</p>
+
+            <div class="video-carousel">
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <div class="video-container" id="videoContainer">
+                    <div class="video-slide active">
+                        <iframe src="https://www.youtube.com/embed/XNLQtWdk6fc" title="Nutrição: como gostar de alimentos saudáveis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Nutrição: Como Gostar de Alimentos Saudáveis</h4>
+                    </div>
+
+                    <div class="video-slide">
+                        <iframe src="https://www.youtube.com/embed/oSt6GsSw6VI" title="Dicas de nutrição essenciais" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Dicas de Nutrição Essenciais</h4>
+                    </div>
+
+                    <!-- Substitui o 3º .video-slide -->
+                    <div class="video-slide">
+                        <iframe src="https://www.youtube.com/embed/zqPA_xfQlVw" title="Como Perder Gordura" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Como Perder Gordura</h4>
+                    </div>
+
+
+                    <div class="video-slide">
+                        <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" title="Yoga para iniciantes (20 minutos)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Yoga para Iniciantes (20 min)</h4>
+                    </div>
+
+                    <div class="video-slide">
+                        <iframe src="https://www.youtube.com/embed/xyQY8a-ng6g" title="Como a alimentação afeta seu cérebro - TED-Ed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Como a Alimentação Afeta seu Cérebro (TED-Ed)</h4>
                     </div>
                 </div>
-                <div class="vantagens-card">
-                    <div class="content">
-                        <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/apple.png" alt="Nutricao">
-                        <h3>Dicas de Nutrição</h3>
-                        <p class="para">
-                            Orientação sobre alimentação saudável para maximizar seus resultados
-                        </p>
-                    </div>
-                </div>
-                <div class="vantagens-card">
-                    <div class="content">
-                        <img class="icon" src="https://img.icons8.com/ios-filled/50/4CAF50/dumbbell.png" alt="Treinos">
-                        <h3>Treinos Eficazes</h3>
-                        <p class="para">
-                            Exercícios para todos os níveis, projetados por profissionais
-                        </p>
-                    </div>
-                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="carousel-indicators" id="indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
             </div>
         </div>
-
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 LifeHub — Todos os direitos reservados.
+    </footer>
 
     <script src="ScriptHome.js"></script>
-    <script>
-        // Script para controle do menu hambúrguer
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            const menuOverlay = document.getElementById('menu-overlay');
-            const navLinks = document.querySelectorAll('.nav-menu a');
-
-            // Função para abrir/fechar menu
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                menuOverlay.classList.toggle('active');
-
-                // Prevenir scroll do body quando menu estiver aberto
-                if (navMenu.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = 'auto';
-                }
-            }
-
-            // Função para fechar menu
-            function closeMenu() {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-
-            // Event listeners
-            hamburger.addEventListener('click', toggleMenu);
-            menuOverlay.addEventListener('click', closeMenu);
-
-            // Fechar menu ao clicar em um link
-            navLinks.forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
-
-            // Fechar menu com ESC
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    closeMenu();
-                }
-            });
-
-            // Fechar menu ao redimensionar para desktop
-            window.addEventListener('resize', function () {
-                if (window.innerWidth >= 768) {
-                    closeMenu();
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
