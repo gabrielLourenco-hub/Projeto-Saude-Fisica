@@ -1,50 +1,67 @@
-/* Reset e estilos básicos */
+/* ================= FONTES LOCAIS ================= */
+@font-face {
+  font-family: 'Agrandir Tight Black';
+  src: url('fonts/Agrandir-TightBlack.woff2') format('woff2'),
+    url('fonts/Agrandir-TightBlack.woff') format('woff'),
+    url('fonts/Agrandir-TightBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Agrandir Tight Bold';
+  src: url('fonts/Agrandir-TightBold.woff2') format('woff2'),
+    url('fonts/Agrandir-TightBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================= RESET E BÁSICO ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: transparent;
+}
+
+body.is-locked {
+  overflow: hidden;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   background: url(full-shot-mulher-com-fones-de-ouvido.jpg) no-repeat center
     center fixed;
   background-size: cover;
   color: #212529;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
-/* Header padronizado com menu hambúrguer - Mobile First */
+/* ================= HEADER (CLARO + STICKY) ================= */
 .header {
-  position: fixed;
+  position: sticky; /* participa do fluxo; não precisa compensar com padding no body */
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: #2d5d3d;
-  color: white;
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #faf8f3; /* claro, como o novo header */
+  border-bottom: 1px solid #eeeeee;
+  z-index: 100; /* acima do conteúdo; overlay fica acima (z-index: 98/99) */
 }
 
 .header-container {
-  width: 100%;
-  margin: 0;
-  padding: 0 1rem;
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  z-index: 1001;
-  margin-left: 0;
+  z-index: 101;
 }
 
 .header .imlog {
@@ -53,129 +70,178 @@ body {
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-.logo-container a {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #111;
   text-decoration: none;
 }
 
-.logo-container a:hover .logo-text {
-  color: #f0f0f0;
-  transition: color 0.3s ease;
-}
-
-/* Menu Hambúrguer - Mobile First */
+/* ================= HAMBÚRGUER ================= */
+/* Escondido por padrão; exibido no mobile */
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 0.5rem;
-  z-index: 1001;
-  transition: transform 0.3s ease;
-  margin-right: 0;
+  padding: 8px;
+  z-index: 102;
   margin-left: auto;
 }
-
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background: #111;
   margin: 3px 0;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   border-radius: 2px;
 }
-
-/* Animação do hambúrguer quando ativo */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Menu de navegação - Mobile */
+/* ================= MENU NAV ================= */
 .nav-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  background: #2d5d3d;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 12px;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: right 0.3s ease;
-  z-index: 1000;
 }
-
-.nav-menu.active {
-  right: 0;
-}
-
-.nav-menu li {
-  margin: 1rem 0;
-}
-
 .nav-menu a {
-  color: white;
+  color: #111;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  padding: 1rem 2rem;
+  font-size: 16px;
+  padding: 8px 12px;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  display: block;
-  text-align: center;
+  transition: background 0.3s ease;
+}
+.nav-menu a:hover {
+  background: rgba(0, 0, 0, 0.06);
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
-  background-color: rgba(255, 255, 255, 0.2);
+.btn-nav {
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 700;
 }
 
-.nav-menu .btn-nav {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-.nav-menu .btn-nav:hover {
-  background-color: #1a3a26;
-}
-
-/* Overlay para fechar menu */
+/* ================= OVERLAY (MOBILE) ================= */
 .menu-overlay {
-  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 .menu-overlay.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.menu-overlay[hidden] {
+  display: none;
 }
 
-/* Tabela IMC */
+/* ================= MOBILE (OFF-CANVAS MENU) ================= */
+@media (max-width: 768px) {
+  .header-container {
+    width: 95%;
+    padding: 12px 0;
+    position: relative;
+  }
+
+  .logo-text {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+  }
+  .header .imlog {
+    width: 35px;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #faf8f3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    gap: 0;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-menu a {
+    width: 90%;
+    padding: 15px 20px;
+    font-size: 18px;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .btn-nav {
+    background: #067a45;
+    color: #fff;
+    border: 2px solid #067a45;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin: 20px auto 0;
+    font-weight: 700;
+    width: 90%;
+    max-width: 200px;
+    text-align: center;
+    display: block;
+  }
+  .btn-nav:hover {
+    background: #055a35;
+    border-color: #055a35;
+  }
+}
+
+/* ================= DESKTOP AJUSTES ================= */
+@media (min-width: 769px) {
+  .header .imlog {
+    width: 50px;
+  }
+  .logo-text {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= SEÇÕES IMC (MANTIDAS) ================= */
+/* Diminui a margem superior já que o header é sticky */
 .tabela-imc {
-  margin: 120px auto 30px auto;
+  margin: 48px auto 30px auto; /* antes 120px; sticky não precisa compensar */
   max-width: 700px;
   text-align: left;
   padding: 0 1rem;
@@ -216,11 +282,9 @@ body {
 .tabela-imc tr:last-child td {
   border-bottom: none;
 }
-
 .tabela-imc tr:hover td {
   transition: background 0.2s;
 }
-
 .tabela-imc td {
   color: #333;
   border-bottom: 1px solid #e0e0e0;
@@ -260,7 +324,6 @@ body {
   max-width: 700px;
   margin: 20px auto;
 }
-
 .caixa-tabela:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
@@ -278,7 +341,6 @@ body {
   margin: 0 auto 40px auto;
   padding: 0 1rem;
 }
-
 .tabela-calcular input,
 .tabela-calcular select,
 .tabela-calcular label {
@@ -306,7 +368,6 @@ body {
   width: auto;
   min-width: 150px;
 }
-
 .calcular:hover {
   background: linear-gradient(90deg, #088c43 60%, #388e3c 100%);
   transform: scale(1.07);
@@ -327,68 +388,9 @@ body {
   max-width: 180px;
   text-align: center;
 }
-
 #homem.sexo-btn {
   background: #2196f3;
 }
-
 #mulher.sexo-btn.ativo {
   background: #e91e63;
-}
-
-/* Desktop - min-width: 768px */
-@media (min-width: 768px) {
-  .header-container {
-    width: 100%;
-    margin: 0;
-    padding: 0 2rem;
-  }
-
-  .logo-container .imlog {
-    width: 50px;
-  }
-
-  .logo-text {
-    font-size: 1.8rem;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .nav-menu {
-    position: static;
-    width: auto;
-    height: auto;
-    background: none;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 2rem;
-    right: auto;
-  }
-
-  .nav-menu li {
-    margin: 0;
-  }
-
-  .nav-menu a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    margin: 0;
-  }
-
-  .nav-menu .btn-nav {
-    background-color: #008000;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin: 0;
-  }
-
-  .nav-menu .btn-nav:hover {
-    background-color: #4caf50;
-  }
-
-  .menu-overlay {
-    display: none !important;
-  }
 }

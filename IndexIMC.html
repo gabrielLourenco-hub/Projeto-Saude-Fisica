@@ -20,15 +20,15 @@
         </a>
       </div>
 
-      <!-- Menu Hambúrguer -->
-      <div class="hamburger" id="hamburger">
+      <!-- Menu Hambúrguer (mesma estrutura, só ARIA p/ acessibilidade) -->
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-controls="nav-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
       <!-- Menu de Navegação -->
-      <nav class="nav">
+      <nav class="nav" aria-label="Navegação principal">
         <ul class="nav-menu" id="nav-menu">
           <li><a href="IndexHome.html">Início</a></li>
           <li><a href="IndexPlanos.html">Planos</a></li>
@@ -38,11 +38,11 @@
           <li><a href="IndexForm.html" class="btn-nav">Comece Agora</a></li>
         </ul>
       </nav>
-
-      <!-- Overlay para fechar menu -->
-      <div class="menu-overlay" id="menu-overlay"></div>
     </div>
   </header>
+
+  <!-- Overlay para o menu mobile (fora do header) -->
+  <div class="menu-overlay" id="menu-overlay" hidden></div>
 
   <!-- Conteúdo principal -->
   <main>
@@ -126,60 +126,7 @@
     </section>
   </main>
 
-  <script>
-    // Script para controle do menu hambúrguer
-    document.addEventListener('DOMContentLoaded', function () {
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('nav-menu');
-      const menuOverlay = document.getElementById('menu-overlay');
-      const navLinks = document.querySelectorAll('.nav-menu a');
-
-      // Função para abrir/fechar menu
-      function toggleMenu() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-
-        // Prevenir scroll do body quando menu estiver aberto
-        if (navMenu.classList.contains('active')) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-      }
-
-      // Função para fechar menu
-      function closeMenu() {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-
-      // Event listeners
-      hamburger.addEventListener('click', toggleMenu);
-      menuOverlay.addEventListener('click', closeMenu);
-
-      // Fechar menu ao clicar em um link
-      navLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-      });
-
-      // Fechar menu com ESC
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          closeMenu();
-        }
-      });
-
-      // Fechar menu ao redimensionar para desktop
-      window.addEventListener('resize', function () {
-        if (window.innerWidth >= 768) {
-          closeMenu();
-        }
-      });
-    });
-  </script>
+  <script src="ScriptIMC.js"></script>
 
 </body>
 
