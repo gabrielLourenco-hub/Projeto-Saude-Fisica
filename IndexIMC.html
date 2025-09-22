@@ -21,7 +21,8 @@
       </div>
 
       <!-- Menu Hambúrguer (mesma estrutura, só ARIA p/ acessibilidade) -->
-      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-controls="nav-menu" aria-expanded="false">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação"
+        aria-controls="nav-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -46,84 +47,38 @@
 
   <!-- Conteúdo principal -->
   <main>
-    <!-- Seção explicativa do IMC -->
-    <section class="tabela-imc">
-      <div class="caixa-central">
-        <p>
-          <strong>O que é o IMC?</strong><br /><br />
-          O IMC, sigla para Índice de Massa Corporal, é uma medida utilizada para avaliar se uma pessoa está com o peso adequado em relação à sua altura. Ele é amplamente utilizado por profissionais da saúde como uma forma simples e rápida de identificar possíveis problemas relacionados ao peso, como magreza excessiva, sobrepeso ou obesidade.<br /><br />
-          O cálculo do IMC é feito dividindo o peso (em quilogramas) pela altura ao quadrado (em metros), usando a fórmula:<br />
-          <em>IMC = peso (kg) / altura (m)²</em><br /><br />
-          Classificação do IMC (adultos):
-        </p>
 
-        <h2>Tabela de Classificação do IMC</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>IMC</th>
-              <th>Classificação</th>
-              <th>Obesidade (Grau)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Menor que 18,5</td>
-              <td>Magreza</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>18,5 - 24,9</td>
-              <td>Normal</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>25,0 - 29,9</td>
-              <td>Sobrepeso</td>
-              <td>I</td>
-            </tr>
-            <tr>
-              <td>30,0 - 39,9</td>
-              <td>Obesidade</td>
-              <td>II</td>
-            </tr>
-            <tr>
-              <td>Maior que 40,0</td>
-              <td>Obesidade Grave</td>
-              <td>III</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="containerIMC">
 
-        <!-- Calculadora IMC -->
-        <div class="caixa-tabela">
-          <div class="tabela-calcular">
-            <h2>Calculadora de IMC</h2>
-            <div class="sexo">
-              <button id="mulher" class="sexo-btn ativo">Mulher</button>
-              <button id="homem" class="sexo-btn">Homem</button>
-            </div>
+      <h1>Calculadora IMC</h1>
 
-            <div class="campo">
-              <label for="idade">Idade</label>
-              <input type="number" id="idade" placeholder="Ex: 35" />
-            </div>
+      <p>Entre com as informações solicitadas para que seu perfil seja traçado corretamente</p>
 
-            <div class="campo">
-              <label for="altura">Altura (cm)</label>
-              <input type="number" id="altura" placeholder="Ex: 165" />
-            </div>
+      <div class=calculadora>
 
-            <div class="campo">
-              <label for="peso">Peso (kg)</label>
-              <input type="number" id="peso" placeholder="Ex: 62,5" step="0.1" />
-            </div>
+        <div class="input">
 
-            <button class="calcular">CALCULAR</button>
-          </div>
+        <label for="peso">Peso (kg)</label>
+        <input type="number" id="peso" aria-labelledby="peso" placeholder="Ex:70 Kg" />
+
+        <label for="altura">Altura (cm)</label>
+        <input type="number" id="altura" aria-labelledby="altura" placeholder="Ex:175 cm" />
+
+        <button id="calcular">Calcular</button>
+</div>
+
+      
+
+      <div class="resultado">
+
+        <h3>IMC</h3>
+        <p id="resultadoIMC">22.8</p>
+
+        <span id="classificacaoIMC">Classificação: Normal</span>
+        <button class="btSM" id:saibaM>Saiba Mais</button>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <script src="ScriptIMC.js"></script>
