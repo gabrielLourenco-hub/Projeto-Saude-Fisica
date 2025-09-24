@@ -24,14 +24,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: transparent;
+
 }
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background-color: transparent;
+  
   color: #212529;
   text-align: center;
+  background: url(imagens/mulher-de-tiro-medio-praticando-com-halteres.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Header padronizado com menu hambúrguer */
@@ -227,36 +229,27 @@ button:hover {
   color: white;
 }
 
-.video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 1;
-}
 
-.Prisec > *:not(.video-bg) {
-  position: relative;
-  z-index: 1;
-}
 
-.Prisec {
-  min-height: 100vh;
-  padding: 140px 10px 50px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background-color: transparent;
-}
-
-.Prisec h1 {
-  color: #fff;
+h1 {
+  font-family: 'Agrandir Tight Black', sans-serif;
+  color: white;
   font-size: 4rem;
   margin-bottom: 40px;
   background-color: transparent;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Agrandir Tight Black', sans-serif;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: 'Agrandir Tight Bold', sans-serif;
+  color: #111;
+  margin-bottom: 10px;
 }
 
 /* ================= MOBILE (OFF-CANVAS MENU) ================= */
@@ -271,6 +264,7 @@ button:hover {
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
   }
+
   .header .imlog {
     width: 35px;
   }
@@ -299,6 +293,7 @@ button:hover {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 99;
   }
+
   .nav-menu.active {
     right: 0;
   }
@@ -310,6 +305,7 @@ button:hover {
     display: flex;
     justify-content: center;
   }
+
   .nav-menu a {
     width: 90%;
     padding: 15px 20px;
@@ -332,6 +328,7 @@ button:hover {
     text-align: center;
     display: block;
   }
+
   .btn-nav:hover {
     background: #055a35;
     border-color: #055a35;

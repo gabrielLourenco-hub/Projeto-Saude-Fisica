@@ -117,3 +117,5 @@ document.addEventListener("DOMContentLoaded", function () {
     classificacaoIMC.textContent = `Classificação: ${classificacao}`;
   });
 });
+
+
