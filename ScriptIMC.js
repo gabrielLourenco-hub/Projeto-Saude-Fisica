@@ -74,3 +74,46 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth >= 768) closeMenu();
   });
 });
+
+// Calculadora do IMC 
+document.addEventListener("DOMContentLoaded", function () {
+  const calcularBtn = document.getElementById("calcular");
+  const pesoInput = document.getElementById("peso");
+  const alturaInput = document.getElementById("altura");
+  const resultadoIMC = document.getElementById("resultadoIMC");
+  const classificacaoIMC = document.getElementById("classificacaoIMC");
+
+  calcularBtn.addEventListener("click", function () {
+    const peso = parseFloat(pesoInput.value);
+    const alturaCm = parseFloat(alturaInput.value);
+
+    if (!peso || !alturaCm || alturaCm <= 0) {
+
+      classificacaoIMC.textContent = "Por favor, insira valores válidos.";
+      return;
+    }
+
+    const altura = alturaCm / 100;
+
+    // cálculo IMC
+    const imc = (peso / (altura * altura)).toFixed(1);
+
+    let classificacao = "";
+    if (imc < 18.5) {
+      classificacao = "Magreza";
+    } else if (imc < 25) {
+      classificacao = "Normal";
+    } else if (imc < 30) {
+      classificacao = "Sobrepeso";
+    } else if (imc < 35) {
+      classificacao = "Obesidade grau I";
+    } else if (imc < 40) {
+      classificacao = "Obesidade grau II";
+    } else {
+      classificacao = "Obesidade grau III";
+    }
+
+    resultadoIMC.textContent = imc;
+    classificacaoIMC.textContent = `Classificação: ${classificacao}`;
+  });
+});
