@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Calculadora do IMC 
-document.addEventListener("DOMContentLoaded", function () {
   const calcularBtn = document.getElementById("calcular");
   const pesoInput = document.getElementById("peso");
   const alturaInput = document.getElementById("altura");
@@ -93,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // convertendo cm para metros
     const altura = alturaCm / 100;
 
     // cálculo IMC
@@ -116,6 +116,4 @@ document.addEventListener("DOMContentLoaded", function () {
     resultadoIMC.textContent = imc;
     classificacaoIMC.textContent = `Classificação: ${classificacao}`;
   });
-});
-
-
+;
