@@ -267,9 +267,10 @@ body {
 
 /* =========================== FORM (mantido) =========================== */
 .wrapper {
+ 
   width: 280px;
-  margin: 0 auto;
-  display: grid;
+  margin: 60px auto 0 auto;
+  display: flex;
   place-items: center;
   background: rgba(255, 255, 255, 0.932);
   color: #f0f0f0;
