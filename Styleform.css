@@ -42,6 +42,9 @@ body {
   color: #212529;
   min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  
   /* sem padding-top: com sticky o header ocupa fluxo normal */
 }
 
@@ -267,7 +270,7 @@ body {
 
 /* =========================== FORM (mantido) =========================== */
 .wrapper {
- 
+ justify-content: center;
   width: 280px;
   margin: 60px auto 0 auto;
   display: flex;
